@@ -23,3 +23,16 @@
 | 向右分割 | Ctrl + \ | Cmd + \ |
 | 刪除列 | Ctrl + Shift + K | Cmd + Shift + K |
 | 收合側邊欄 | Ctrl + B | Cmd + B |
+
+## 圖片網站
+
+[unsplash](https://unsplash.com/)
+
+[Lorem Picsum](https://picsum.photos/)
+
+[PlaceHolder](https://placeholder.com/)
+
+https://via.placeholder.com/600x300/f00/fff/?text=hello
+
+https://via.placeholder.com/寬x高/背景色/文字色/?text=文字內容
+
