@@ -9,19 +9,19 @@
 <body>
     <form action="">
         <label for="name">姓名</label>
-        <input type="text" id="name" name="name">
+        <input type="text" id="name" name="name" placeholder="請輸入中文姓名" required>
         <br>
         <label for="pw">密碼</label>
-        <input type="password" id="pw" name="pw">
+        <input type="password" id="pw" name="pw" placeholder="請輸入密碼">
         <br>
         <label for="email">Email</label>
         <input type="email" id="email" name="email">
         <br>
         <label for="birth">生日</label>
-        <input type="date" id="birth" nam="birth">
+        <input type="date" id="birth" name="birth">
         <br>
         <label for="number">數量</label>
-        <input type="number" id="number" name="number">
+        <input type="number" id="number" name="number" min="1" max="3" placeholder="1">
         <br>
         <label>性別</label>
 
@@ -29,14 +29,16 @@
         <label for="male">男</label>
         <input type="radio" id="female" name="gender" value="女">
         <label for="female">女</label>
+        <input type="radio" id="unknows" name="gender" value="不透露" checked>
+        <label for="unknows">不透露</label>
         <br>
         <label>從哪裡得知(可複選)</label>
 
-        <input type="checkbox" id="net" name="knows" value="網路廣告">
+        <input type="checkbox" id="net" name="knows" value="網路廣告"checked>
         <label for="net">網路廣告</label>
-        <input type="checkbox" id="friend" name="knows" value="親友介紹">
+        <input type="checkbox" id="friend" name="knows" value="親友介紹"checked>
         <label for="friend">親友介紹</label>
-        <input type="checkbox" id="dm" name="knows" value="DM廣告">
+        <input type="checkbox" id="dm" name="knows" value="DM廣告"checked>
         <label for="dm">DM廣告</label>
         <br>
 
@@ -46,9 +48,12 @@
             <option value="國小">國小</option>
             <option value="國中">國中</option>
             <option value="高中職">高中職</option>
-            <option value="大專院校">大專院校</option>
+            <option value="大專院校" selected>大專院校</option>
             <option value="研究所以上">研究所以上</option>
         </select>
+        <br>
+        <label for="content">內容</label>
+        <textarea name="content" id="content" cols="60" rows="20" placeholder="請輸入內容"></textarea>
         <br>
         <input type="submit" value="送出">
     </form>
