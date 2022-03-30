@@ -25,19 +25,30 @@
         <br>
         <label>性別</label>
 
-        <input type="radio" id="male" name="gender">
+        <input type="radio" id="male" name="gender" value="男">
         <label for="male">男</label>
-        <input type="radio" id="female" name="gender">
+        <input type="radio" id="female" name="gender" value="女">
         <label for="female">女</label>
         <br>
         <label>從哪裡得知(可複選)</label>
 
-        <input type="checkbox" id="net" name="knows">
+        <input type="checkbox" id="net" name="knows" value="網路廣告">
         <label for="net">網路廣告</label>
-        <input type="checkbox" id="friend" name="knows">
+        <input type="checkbox" id="friend" name="knows" value="親友介紹">
         <label for="friend">親友介紹</label>
-        <input type="checkbox" id="dm" name="knows">
+        <input type="checkbox" id="dm" name="knows" value="DM廣告">
         <label for="dm">DM廣告</label>
+        <br>
+
+        <label for="edu">學歷</label>
+        <select name="edu" id="edu">
+            <option>--請選擇--</option>
+            <option value="國小">國小</option>
+            <option value="國中">國中</option>
+            <option value="高中職">高中職</option>
+            <option value="大專院校">大專院校</option>
+            <option value="研究所以上">研究所以上</option>
+        </select>
         <br>
         <input type="submit" value="送出">
     </form>
