@@ -27,23 +27,11 @@
 | 開發者工具 | F12,Ctrl + Shift + I | Cmd + Opt + I |
 | 格式化程式碼 | Alt + Shift + F | |
 
-## 圖片網站
-
-[unsplash](https://unsplash.com/)
-
-[Lorem Picsum](https://picsum.photos/)
-
-[PlaceHolder](https://placeholder.com/)
-
-https://via.placeholder.com/600x300/f00/fff/?text=hello
-
-https://via.placeholder.com/寬x高/背景色/文字色/?text=文字內容
-
 ## 推薦網站
 
 [unsplash](https://unsplash.com/)
 
-[Lorem Picsum](**https**://picsum.photos/)
+[Lorem Picsum](https://picsum.photos/)
 
 [PlaceHolder](https://placeholder.com/)
 
