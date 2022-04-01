@@ -40,3 +40,5 @@ https://via.placeholder.com/600x300/f00/fff/?text=hello
 https://via.placeholder.com/寬x高/背景色/文字色/?text=文字內容
 
 [Color Hunt](https://colorhunt.co/)
+
+[Gradient Hunt](https://gradienthunt.com/)
