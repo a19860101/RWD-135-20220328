@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing:border-box ;
+        }
+        .container {
+            width: 900px;
+            margin: auto;
+            font-size: 0;
+
+            background-color: #ccc;
+        }
+        .box {
+            width: 300px;
+            display: inline-block;
+            /* background-color: #0af; */
+            font-size: 16px;
+            padding: 10px;
+
+            vertical-align: top;
+            /* baseline, top, middle, bottom */
+        }
+        /* 
+            inline-block 缺點
+            會產生4px不等的空隙
+
+            解法
+            父元素的font-size設定為0
+            子元素的font-size還原
+            設定垂直對齊
+        */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nam officiis odio, eum praesentium delectus soluta at. Architecto molestias eaque nemo animi praesentium nihil odit eius, vero voluptas in consequuntur!
+            </p>
+        </div>
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit aperiam porro consectetur, corporis officia eaque quae fugit blanditiis, necessitatibus autem quibusdam placeat quod commodi vero voluptates minima a nemo! Qui modi praesentium repellat porro. Incidunt consectetur dignissimos illo? Est, commodi. Illo neque, hic earum inventore aliquid deleniti sapiente. Voluptate quaerat sunt amet molestias dolorem nesciunt cumque rem consectetur! Consequatur quas nesciunt beatae quae vero! Ratione incidunt esse harum quia saepe accusamus illum!
+            </p>
+        </div>
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam excepturi, nemo error maiores sapiente praesentium obcaecati qui. Blanditiis unde suscipit sequi, sed alias, animi et temporibus facilis odio modi laudantium iure eligendi nostrum architecto ut, perspiciatis amet perferendis magni. Assumenda, laudantium cumque esse atque consequuntur blanditiis consequatur perspiciatis eius cupiditate?
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
