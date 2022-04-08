@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Gill Sans MT';
+        }
+        header {
+            width: 100%;
+            height: 600px;
+            background-color: #ccc;
+        }
+        header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .container {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+
+            padding: 100px 0;
+        }
+        .box {
+            flex: 0 0 calc(100% / 3);
+            padding: 15px;
+        }
+        .box p {
+            margin: 15px 0;
+            line-height: 1.7rem;
+        }
+        .box h2 {
+            font-size: 2.6rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://picsum.photos/id/98/1600/800" alt="">
+    </header>
+    <div class="container">
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis magnam necessitatibus ducimus illo illum consequuntur, optio quidem quo hic voluptatum eveniet eaque harum nam eos laudantium aliquid nostrum. Esse, tempore.
+            </p>
+            <a href="#">Link</a>
+        </div>
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis aspernatur voluptate deleniti, voluptas vitae reiciendis enim nam commodi, explicabo iusto recusandae? Rem dolorum deserunt impedit cumque voluptatum nemo ad facere.
+            </p>
+            <a href="#">Link</a>
+        </div>
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eveniet rerum dicta quasi nisi. Ut nulla vel eum, consequuntur consectetur commodi accusantium nobis, minima at quia soluta doloremque nemo id!
+            </p>
+            <a href="#">Link</a>
+        </div>
+    </div>
+</body>
+</html>
