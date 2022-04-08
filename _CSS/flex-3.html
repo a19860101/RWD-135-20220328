@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Gill Sans MT';
+        }
+        .container {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            /* flex-wrap: wrap; */
+
+            flex-direction: column;
+        }
+        .box {
+            /* width: calc(100% / 3); */
+            flex-basis: calc(100% / 3);
+            background-color: #fa0;
+        }
+        /* 
+            在flex-direction:row的情況下，flex-basis代表寬度
+            在flex-direction:column的情況下，flex-basis代表高度
+        */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum laboriosam provident ratione dolorum corporis soluta, quae neque id ab aut?
+            </p>
+        </div>
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum laboriosam provident ratione dolorum corporis soluta, quae neque id ab aut?
+            </p>
+        </div>
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum laboriosam provident ratione dolorum corporis soluta, quae neque id ab aut?
+            </p>
+        </div>
+    </div>
+</body>
+</html>
