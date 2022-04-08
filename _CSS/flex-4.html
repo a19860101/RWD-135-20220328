@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Gill Sans MT';
+        }
+        .container {
+            display: flex;
+            width: 1200px;
+            margin: auto;
+            flex-wrap: wrap;
+        }
+        .box {
+            flex:0 0 calc(100% / 3);
+            padding: 15px;
+        }
+        .box:nth-child(1){
+            order: 1;
+        }
+        .box:nth-child(3){
+            order: 2;
+        }
+        /* 
+            order順序
+            未設定order -> order數字小 -> order數字大
+        */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>title 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, ullam quia molestiae voluptates repellendus enim eius nesciunt maiores quasi, aut sed quas rerum? Consequuntur officia placeat architecto, et enim modi.
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, ullam quia molestiae voluptates repellendus enim eius nesciunt maiores quasi, aut sed quas rerum? Consequuntur officia placeat architecto, et enim modi.
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 3</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, ullam quia molestiae voluptates repellendus enim eius nesciunt maiores quasi, aut sed quas rerum? Consequuntur officia placeat architecto, et enim modi.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
