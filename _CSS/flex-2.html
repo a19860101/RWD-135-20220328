@@ -11,18 +11,20 @@
         }
         .container {
             width: 1600px;
+            /* height: 2000px; */
             margin: auto;
             background-color: #aaa;
 
             display: flex;
             flex-wrap: wrap;
+            flex-direction: row;
 
             justify-content: space-around;
             /* 
                 flex-start,  flex-end, center
                 space-between, space-around, space-evenly
             */
-            align-items: baseline;
+            align-items: center;
             /* 
                 flex-start,  flex-end, center
                 stretch, baseline
@@ -32,6 +34,10 @@
             width: 320px;
             padding: 15px;
             background-color: limegreen;
+        }
+        .box:nth-child(1){
+            background-color: #fa0;
+            align-self: flex-end;
         }
     </style>
 </head>
