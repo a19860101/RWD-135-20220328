@@ -15,7 +15,7 @@
             background-color: #ccc;
             margin: auto;
             display: flex;
-            /* flex-wrap: wrap; */
+            flex-wrap: wrap;
 
             flex-direction: row;
         }
@@ -29,21 +29,26 @@
             在flex-direction:column的情況下，flex-basis代表高度
 
             flex-grow: 延展，預設為不延展(0)
+            flex-shrink: 壓縮，預設為開啟壓縮(1)，但會與flex-wrap:wrap 衝突
+            當wrap開啟，shrink會失效
         */
         .box:nth-child(1){
-            flex-basis: 300px;
-            flex-grow:1;
+            flex-basis: 600px;
+            flex-grow: 0;
+            flex-shrink: 1;
             background-color: #ff6666;
         }
         .box:nth-child(2){
-            flex-basis: 300px;
-            flex-grow: 3;
+            flex-basis: 600px;
+            flex-grow: 0;
+            flex-shrink: 4;
             background-color: #66d6ff;
 
         }
         .box:nth-child(3){
-            flex-basis: 300px;
-            flex-grow: 1;
+            flex-basis: 600px;
+            flex-grow: 0;
+            flex-shrink: 1;
             background-color: #dbff66;
 
         }
