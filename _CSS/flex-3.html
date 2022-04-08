@@ -11,40 +11,60 @@
             font-family: 'Gill Sans MT';
         }
         .container {
-            width: 1200px;
+            width: 1500px;
+            background-color: #ccc;
             margin: auto;
             display: flex;
             /* flex-wrap: wrap; */
 
-            flex-direction: column;
+            flex-direction: row;
         }
-        .box {
+        /* .box { */
             /* width: calc(100% / 3); */
-            flex-basis: calc(100% / 3);
-            background-color: #fa0;
-        }
+            /* flex-basis: calc(100% / 3); */
+            /* background-color: #fa0; */
+        /* } */
         /* 
             在flex-direction:row的情況下，flex-basis代表寬度
             在flex-direction:column的情況下，flex-basis代表高度
+
+            flex-grow: 延展，預設為不延展(0)
         */
+        .box:nth-child(1){
+            flex-basis: 300px;
+            flex-grow:1;
+            background-color: #ff6666;
+        }
+        .box:nth-child(2){
+            flex-basis: 300px;
+            flex-grow: 3;
+            background-color: #66d6ff;
+
+        }
+        .box:nth-child(3){
+            flex-basis: 300px;
+            flex-grow: 1;
+            background-color: #dbff66;
+
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="box">
-            <h2>title</h2>
+            <h2>title 1</h2>
             <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum laboriosam provident ratione dolorum corporis soluta, quae neque id ab aut?
             </p>
         </div>
         <div class="box">
-            <h2>title</h2>
+            <h2>title 2</h2>
             <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum laboriosam provident ratione dolorum corporis soluta, quae neque id ab aut?
             </p>
         </div>
         <div class="box">
-            <h2>title</h2>
+            <h2>title 3</h2>
             <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum laboriosam provident ratione dolorum corporis soluta, quae neque id ab aut?
             </p>
