@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            width: 1600px;
+            margin: auto;
+            background-color: #aaa;
+
+            display: flex;
+            flex-wrap: wrap;
+
+            justify-content: space-around;
+            /* 
+                flex-start,  flex-end, center
+                space-between, space-around, space-evenly
+            */
+            align-items: baseline;
+            /* 
+                flex-start,  flex-end, center
+                stretch, baseline
+            */
+        }
+        .box {
+            width: 320px;
+            padding: 15px;
+            background-color: limegreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>title 1</h2>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos molestiae aut nobis perspiciatis voluptatibus laudantium laborum, rem, ipsum magni praesentium nulla exercitationem deleniti quibusdam architecto error itaque porro totam similique?
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 2</h2>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos molestiae aut nobis perspiciatis voluptatibus laudantium laborum, rem, ipsum magni praesentium nulla exercitationem deleniti quibusdam architecto error itaque porro totam similique?
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos molestiae aut nobis perspiciatis voluptatibus laudantium laborum, rem, ipsum magni praesentium nulla exercitationem deleniti quibusdam architecto error itaque porro totam similique?
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos molestiae aut nobis perspiciatis voluptatibus laudantium laborum, rem, ipsum magni praesentium nulla exercitationem deleniti quibusdam architecto error itaque porro totam similique?
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 3</h2>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos molestiae aut nobis perspiciatis voluptatibus laudantium laborum, rem, ipsum magni praesentium nulla exercitationem deleniti quibusdam architecto error itaque porro totam similique?
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos molestiae aut nobis perspiciatis voluptatibus laudantium laborum, rem, ipsum magni praesentium nulla exercitationem deleniti quibusdam architecto error itaque porro totam similique?
+            </p>
+        </div>
+    </div>
+</body>
+</html>
