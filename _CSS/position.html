@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+        .red{
+            background-color: #ff7070;
+        }
+        .green {
+            background-color: #90e85d;
+        }
+        .blue {
+            background-color: #1981ff;
+        }
+        .purple {
+            background-color: #c50080;
+        }
+        .relative{
+            position: relative;
+        }
+        /* ---------------------- */
+        .b1 {
+            top: 100px;
+            left: 100px;
+            z-index: 10;
+        }
+        .b2 {
+            left: 80px;
+            z-index: 11;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        定位 position
+        
+        靜態static
+        相對relative (top, bottom, left, right, z-index)
+        絕對absolute
+        固定fixed
+        黏性sticky
+     -->
+
+    <div class="relative box green b1"></div>
+    <div class="relative box blue b2"></div>
+</body>
+</html>
