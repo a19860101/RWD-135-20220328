@@ -1,3 +1,13 @@
+/* variable */
+:root {
+    --red: #ff2424;
+    --blue: #0af;
+    --green:#3d9f5a;
+    --yellow:#f9f370;
+    --orange:#ffbd41;
+    --dark:#212121;
+    --light:#dcdcdc;
+}
 /* reset css */
 * {
     margin: 0;
@@ -6,6 +16,8 @@
 }
 body {
     font-family: 'Segoe UI','微軟正黑體';
+
+    /* background-color: var(--yellow); */
 }
 table {
     border-collapse: collapse;
