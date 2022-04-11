@@ -104,6 +104,13 @@ header img{
     padding-top: 120px;
     padding-bottom: 120px;
 }
+#about h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin:0 15px 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--light);
+}
 #about h3 {
     font-size: 2rem;
     text-transform: capitalize;
