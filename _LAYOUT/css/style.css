@@ -14,7 +14,8 @@ nav {
 
 }
 .nav-group {
-    margin-left: auto;
+    width: 100%;
+    display: flex;
 }
 .nav-link {
     color: var(--light);
@@ -24,5 +25,8 @@ nav {
 .nav-menu {
     list-style: none;
     display: flex;
+}
+
+.nav-menu:nth-child(2){
     margin-left: auto;
 }
