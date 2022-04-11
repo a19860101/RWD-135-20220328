@@ -32,7 +32,8 @@ nav {
 }
 
 /* header */
-header {
+/* 方法一:使用background-image */
+/* header {
     width: 100%;
     background-image: url('https://picsum.photos/id/95/1600/1000');
     background-size: cover;
@@ -48,17 +49,41 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center; */
+/* } */ 
+
+/* 方法二:使用img */
+header {
+    width: 100%;
+    position: relative;
+}
+header img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .header-content {
-    max-width: 800px;
-    margin: auto;
-    background-color: #ffffff2d;
-    backdrop-filter: blur(5px);
-    padding: 30px;
+    /* background-color: rgba(255, 140, 140, 0.276); */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 .header-content h1 {
     font-size: 80px;
 }
 .header-content p {
     font-size: 20px;
+}
+.header-body {
+    background-color: #ffffff5c;
+    text-align: center;
+    padding: 30px;
+    backdrop-filter: blur(6px);
+    max-width: 800px;
 }
