@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            height: 2000px;
+        }
+        .box-xl {
+            width: 600px;
+            height: 400px;
+        }
         .box {
             width: 200px;
             height: 200px;
@@ -25,6 +32,9 @@
         .relative{
             position: relative;
         }
+        .absolute {
+            position: absolute;
+        }
         /* ---------------------- */
         .b1 {
             top: 100px;
@@ -34,6 +44,14 @@
         .b2 {
             left: 80px;
             z-index: 11;
+        }
+        .b3 {
+            right: 0;
+            bottom: 0;
+        }
+        .b4 {
+            left: 0;
+            top: 0;
         }
     </style>
 </head>
@@ -50,5 +68,9 @@
 
     <div class="relative box green b1"></div>
     <div class="relative box blue b2"></div>
+    <div class="absolute box purple b3"></div>
+    <div class="box-xl relative green">
+        <div class="box red absolute b4"></div>
+    </div>
 </body>
 </html>
