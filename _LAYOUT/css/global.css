@@ -1,9 +1,9 @@
 /* variable */
 :root {
-    --red: #ff2424;
+    --red: hsl(0, 100%, 57%);
     --blue: #0af;
     --green:#3d9f5a;
-    --yellow:#fff652;
+    --yellow:hsl(57, 100%, 66%);
     --orange:#ffbd41;
     --dark:#212121;
     --light:#dcdcdc;
@@ -37,11 +37,17 @@ table {
     background-color: var(--red);
     color: var(--white);
 }
+.btn-red:hover {
+    background-color: hsl(0, 100%, 40%);
+}
 .btn-blue {
     background-color: var(--blue);
 }
 .btn-yellow {
     background-color: var(--yellow);
+}
+.btn-yellow:hover {
+    background-color: hsl(57, 100%, 77%);;
 }
 .btn-orange {
     background-color: var(--orange);

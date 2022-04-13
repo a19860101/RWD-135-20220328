@@ -20,7 +20,14 @@ nav {
 .nav-link {
     color: var(--light);
     text-decoration: none;
-    padding: 0 8px;
+    padding: 10px 8px;
+    display: inline-block;
+    border-radius: 5px;
+}
+.nav-link:hover{
+    /* color: var(--dark); */
+    /* background-color: var(--yellow); */
+    text-decoration: underline;
 }
 .nav-menu {
     list-style: none;
