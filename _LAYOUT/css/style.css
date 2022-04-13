@@ -159,3 +159,22 @@ header img{
     line-height: 1.7rem;
     margin: 15px 0;
 }
+/* Product */
+#product {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+.product-wrapper {
+    border: var(--light) solid 1px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.product-content {
+    padding: 15px;
+}
+.product-content h3 {
+    margin-bottom: 10px;
+}
+.product-content p {
+    margin-bottom: 15px;
+}
