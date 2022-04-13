@@ -3,10 +3,12 @@
     --red: #ff2424;
     --blue: #0af;
     --green:#3d9f5a;
-    --yellow:#f9f370;
+    --yellow:#fff652;
     --orange:#ffbd41;
     --dark:#212121;
     --light:#dcdcdc;
+    --white: #fff;
+    --black: #000;
 }
 /* reset css */
 * {
@@ -21,4 +23,36 @@ body {
 }
 table {
     border-collapse: collapse;
+}
+/* button */
+.btn {
+    display: inline-block;
+    padding: 8px 20px;
+    border: 0;
+    text-decoration: none;
+    color: var(--dark);
+    border-radius: 6px;
+}
+.btn-red {
+    background-color: var(--red);
+    color: var(--white);
+}
+.btn-blue {
+    background-color: var(--blue);
+}
+.btn-yellow {
+    background-color: var(--yellow);
+}
+.btn-orange {
+    background-color: var(--orange);
+}
+.btn-green {
+    background-color: var(--green);
+}
+.btn-dark {
+    background-color: var(--dark);
+    color: var(--light);
+}
+.btn-light {
+    background-color: var(--light);
 }
