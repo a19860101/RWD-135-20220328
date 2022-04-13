@@ -1,9 +1,9 @@
 /* variable */
 :root {
-    --red: hsl(0, 100%, 57%);
+    --red: #ff2424;
     --blue: #0af;
     --green:#3d9f5a;
-    --yellow:hsl(57, 100%, 66%);
+    --yellow:#fff652;
     --orange:#ffbd41;
     --dark:#212121;
     --light:#dcdcdc;
@@ -30,35 +30,51 @@ table {
     padding: 8px 20px;
     border: 0;
     text-decoration: none;
-    color: var(--dark);
     border-radius: 6px;
+    color: var(--btn-text-color,#222);
+    background-color: var(--btn-bg-color,#ccc);
+
 }
 .btn-red {
-    background-color: var(--red);
-    color: var(--white);
-}
-.btn-red:hover {
-    background-color: hsl(0, 100%, 40%);
+    --btn-bg-color: var(--red);
+    --btn-text-color: var(--white);
 }
 .btn-blue {
-    background-color: var(--blue);
+    --btn-bg-color: var(--blue);
 }
 .btn-yellow {
-    background-color: var(--yellow);
-}
-.btn-yellow:hover {
-    background-color: hsl(57, 100%, 77%);;
+    --btn-bg-color: var(--yellow);
 }
 .btn-orange {
-    background-color: var(--orange);
+    --btn-bg-color: var(--orange);
 }
 .btn-green {
-    background-color: var(--green);
+    --btn-bg-color: var(--green);
 }
 .btn-dark {
-    background-color: var(--dark);
-    color: var(--light);
+    --btn-bg-color: var(--dark);
 }
 .btn-light {
-    background-color: var(--light);
+    --btn-bg-color: var(--light);
+}
+.btn-red:hover {
+    --btn-bg-color: #fc5f5f;
+}
+.btn-blue:hover {
+    --btn-bg-color: #62cbff;
+}
+.btn-yellow:hover {
+    --btn-bg-color: #fffa94;
+}
+.btn-orange:hover {
+    --btn-bg-color: #ffd68a;
+}
+.btn-green:hover {
+    --btn-bg-color: #88daa0;
+}
+.btn-dark:hover {
+    --btn-bg-color: #3c3c3c;
+}
+.btn-light:hover {
+    --btn-bg-color:#e2e0e0;
 }
