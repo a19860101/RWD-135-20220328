@@ -20,16 +20,27 @@ nav {
 .nav-link {
     color: var(--light);
     text-decoration: none;
-    padding: 10px 8px;
+    padding: 10px 0px;
+    margin: 0 8px;
     display: inline-block;
     border-radius: 5px;
+    position: relative;
+}
+.nav-link:hover::after {
+    content:'';
+    display: inline-block;
+    border-bottom: 2px solid var(--orange);
+    width: 100%;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
 }
 /* 虛擬類別 */
-.nav-link:hover{
+/* .nav-link:hover{ */
     /* color: var(--dark); */
     /* background-color: var(--yellow); */
-    text-decoration: underline;
-}
+    /* text-decoration: underline; */
+/* } */
 .nav-menu {
     list-style: none;
     display: flex;
