@@ -24,6 +24,7 @@ nav {
     display: inline-block;
     border-radius: 5px;
 }
+/* 虛擬類別 */
 .nav-link:hover{
     /* color: var(--dark); */
     /* background-color: var(--yellow); */
