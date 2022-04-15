@@ -193,3 +193,16 @@ header img{
 .product-content p {
     margin-bottom: 15px;
 }
+/* contact */
+#contact {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-color: var(--light);
+}
+#contact h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--dark);
+}

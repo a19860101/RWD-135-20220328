@@ -81,3 +81,20 @@ img {
 .btn-light:hover {
     --btn-bg-color:#e2e0e0;
 }
+
+/* form */
+.form-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.form-control {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1px solid #999;
+
+}
+textarea.form-control {
+    height: 200px;
+}
