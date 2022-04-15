@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Gill sans mT';
+        }
+        .container {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box {
+            flex: 0 0 25%;
+            padding: 15px;
+        }
+        @media (max-width: 1200px){
+            .container {
+                width: 600px;
+                /* margin: auto; */
+                /* display: flex; */
+                /* flex-wrap: wrap; */
+            }
+            .box {
+                flex: 0 0 50%;
+                /* padding: 15px; */
+            }
+        }
+        @media (max-width: 600px ){
+            .container {
+                width: 100%;
+                /* margin: auto; */
+                /* display: flex; */
+                /* flex-wrap: wrap; */
+            }
+            .box {
+                flex: 0 0 100%;
+                /* padding: 15px; */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, exercitationem. Veniam enim consectetur, eligendi officia mollitia eveniet laboriosam, reprehenderit consequuntur neque ea dignissimos quo placeat natus nobis doloribus blanditiis est?
+            </p>
+        </div>
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, exercitationem. Veniam enim consectetur, eligendi officia mollitia eveniet laboriosam, reprehenderit consequuntur neque ea dignissimos quo placeat natus nobis doloribus blanditiis est?
+            </p>
+        </div>
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, exercitationem. Veniam enim consectetur, eligendi officia mollitia eveniet laboriosam, reprehenderit consequuntur neque ea dignissimos quo placeat natus nobis doloribus blanditiis est?
+            </p>
+        </div>
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, exercitationem. Veniam enim consectetur, eligendi officia mollitia eveniet laboriosam, reprehenderit consequuntur neque ea dignissimos quo placeat natus nobis doloribus blanditiis est?
+            </p>
+        </div>
+    </div>
+</body>
+</html>
