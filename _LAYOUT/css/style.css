@@ -209,3 +209,10 @@ header img{
 #contact .row {
     justify-content: center;
 }
+/* footer */
+footer {
+    padding: 15px;
+    background-color: var(--dark);
+    color: var(--white);
+    text-align: center;
+}
