@@ -48,9 +48,6 @@ nav {
     flex-direction: column;
 }
 
-.nav-menu:nth-child(2){
-    /* margin-left: auto; */
-}
 @media (min-width: 600px){
     nav {
         width: 100%;
