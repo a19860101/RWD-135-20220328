@@ -206,3 +206,6 @@ header img{
     padding-bottom: 30px;
     border-bottom: 1px solid var(--dark);
 }
+#contact .row {
+    justify-content: center;
+}

@@ -83,6 +83,12 @@ img {
 }
 
 /* form */
+input, textarea {
+    outline: 0;
+}
+.form-control:focus {
+    border: 1px solid #ff9797;
+}
 .form-label {
     display: inline-block;
     margin-bottom: 10px;
