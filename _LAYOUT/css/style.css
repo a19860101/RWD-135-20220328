@@ -1,21 +1,22 @@
 nav {
     width: 100%;
-    height: 70px;
     background-color: var(--dark);
 
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    padding: 20px 0;
 }
 .logo {
     color: var(--light);
     text-decoration: none;
-    padding: 0 8px;
+    padding: 10px 8px;
     font-weight: bold;
 
 }
 .nav-group {
     width: 100%;
     display: flex;
+    flex-direction: column;
 }
 .nav-link {
     color: var(--light);
@@ -44,12 +45,63 @@ nav {
 .nav-menu {
     list-style: none;
     display: flex;
+    flex-direction: column;
 }
 
 .nav-menu:nth-child(2){
-    margin-left: auto;
+    /* margin-left: auto; */
 }
-
+@media (min-width: 600px){
+    nav {
+        width: 100%;
+        height: 70px;
+        background-color: var(--dark);
+    
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+    }
+    .logo {
+        padding: 0 8px;
+    
+    }
+    .nav-group {
+        flex-direction: row;
+    }
+    .nav-link {
+        color: var(--light);
+        text-decoration: none;
+        padding: 10px 0px;
+        margin: 0 8px;
+        display: inline-block;
+        border-radius: 5px;
+        position: relative;
+    }
+    .nav-link:hover::after {
+        content:'';
+        display: inline-block;
+        border-bottom: 2px solid var(--orange);
+        width: 100%;
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+    }
+    /* 虛擬類別 */
+    /* .nav-link:hover{ */
+        /* color: var(--dark); */
+        /* background-color: var(--yellow); */
+        /* text-decoration: underline; */
+    /* } */
+    .nav-menu {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .nav-menu:nth-child(2){
+        margin-left: auto;
+    }
+}
 /* header */
 /* 方法一:使用background-image */
 header {
