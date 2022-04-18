@@ -60,7 +60,6 @@ nav {
 .nav-link:hover::after {
     /* opacity: 1; */
     transform: scaleX(1);
-
 }
 /* 虛擬類別 */
 /* .nav-link:hover{ */
@@ -128,6 +127,7 @@ nav {
     .nav-menu:nth-child(2){
         margin-left: auto;
     }
+    
 }
 /* header */
 /* 方法一:使用background-image */
