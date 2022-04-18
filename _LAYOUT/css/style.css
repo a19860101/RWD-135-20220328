@@ -6,6 +6,12 @@ nav {
     flex-direction: column;
     padding: 20px 0;
 }
+.nav-toggle {
+    color: var(--light);
+    position: absolute;
+    right: 15px;
+    top: 30px;
+}
 .logo {
     color: var(--light);
     text-decoration: none;
@@ -61,6 +67,9 @@ nav {
         flex-direction: row;
         align-items: center;
         padding: 0;
+    }
+    .nav-toggle {
+        display: none;
     }
     .logo {
         padding: 0 8px;
