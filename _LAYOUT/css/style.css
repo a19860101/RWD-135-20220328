@@ -40,8 +40,9 @@ nav {
     display: inline-block;
     border-radius: 5px;
     position: relative;
+
 }
-.nav-link:hover::after {
+.nav-link::after {
     content:'';
     display: inline-block;
     border-bottom: 2px solid var(--orange);
@@ -49,6 +50,17 @@ nav {
     position: absolute;
     bottom: 5px;
     left: 0;
+
+    /* opacity: 0; */
+    transform: scaleX(0);
+    /* transform-origin: left; */
+    transition: 600ms;
+
+}
+.nav-link:hover::after {
+    /* opacity: 1; */
+    transform: scaleX(1);
+
 }
 /* 虛擬類別 */
 /* .nav-link:hover{ */
@@ -256,13 +268,14 @@ header img{
     border-radius: 6px;
     overflow: hidden;
 
-  
+    transition: 300ms;
 }
 .product-wrapper:hover {
     box-shadow: 1px 2px 10px 0px rgba(0,0,0,.2);
     /* 
         box-shadow: 水平偏移 垂直偏移 模糊程度 (擴散程度) 顏色
     */
+    transform: translate(-2px,-2px);
 }
 .product-content {
     padding: 15px;

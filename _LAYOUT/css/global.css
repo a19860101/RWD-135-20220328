@@ -39,6 +39,7 @@ img {
     border-radius: 6px;
     color: var(--btn-text-color,#222);
     background-color: var(--btn-bg-color,#ccc);
+    transition: 600ms;
 
 }
 .btn-red {
