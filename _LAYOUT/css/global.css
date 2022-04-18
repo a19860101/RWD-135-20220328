@@ -16,6 +16,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Segoe UI','微軟正黑體';
 

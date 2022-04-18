@@ -5,6 +5,10 @@ nav {
     display: flex;
     flex-direction: column;
     padding: 20px 0;
+
+    position: fixed;
+    top: 0;
+    z-index: 99;
 }
 .nav-toggle {
     color: var(--light);
