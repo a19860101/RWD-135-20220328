@@ -13,17 +13,24 @@
 
             margin: 10% auto;
 
-            transform: skew(30deg,30deg);
+            /* transform: skew(30deg,30deg); */
             /* 
                 scale() 比例
                 rotate() 旋轉
                 translate() 位移
                 skew() 傾斜
             */
+
+            transition: 300ms;
+        }
+        .box:hover {
+            transform: scale(0.6) rotate(45deg);
         }
     </style>
 </head>
 <body>
-    <div class="box"></div>
+    <div class="box">
+        BOX
+    </div>
 </body>
 </html>
