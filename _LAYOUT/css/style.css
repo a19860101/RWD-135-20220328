@@ -296,3 +296,10 @@ footer {
     color: var(--white);
     text-align: center;
 }
+/* gotop */
+.gotop {
+    color: var(--red);
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+}
