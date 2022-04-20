@@ -11,6 +11,8 @@
             height: 300px;
             border: 1px solid #000;
             position: relative;
+
+            perspective: 800px;
         }
         .front ,.back {
             width: 100%;
@@ -20,12 +22,22 @@
 
         .front {
             background-color: #ffb81d;
+
+            transition: transform 1s;
         }
 
         .back {
             background-color: #ff234b;
             transform: rotateY(180deg);
             backface-visibility: hidden;
+            transition: transform 1s;
+        }
+
+        .flip:hover .front {
+            transform: rotateY(180deg);
+        }
+        .flip:hover .back {
+            transform: rotateY(360deg);
         }
     </style>
 </head>
