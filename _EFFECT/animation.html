@@ -12,7 +12,7 @@
             background-color: #098;
             position: absolute;
 
-            animation: fade-out-right 1s;
+            animation: go 4s;
         }
         @keyframes fade-out-right {
             to {
@@ -24,6 +24,13 @@
             from {
                 opacity: 0;
             }
+        }
+        @keyframes go {
+            0% { transform: translateX(0) translateY(0) rotate(0deg);}
+            25% {transform: translateX(500px) translateY(0) rotate(90deg);}
+            50% {transform: translateX(500px) translateY(500px) rotate(180deg);}
+            75% {transform: translateX(0) translateY(500px) rotate(270deg);}
+            100% {transform: translateX(0) translateY(0) rotate(360deg);}
         }
     </style>
 </head>
