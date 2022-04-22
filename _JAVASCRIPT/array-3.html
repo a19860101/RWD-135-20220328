@@ -37,6 +37,15 @@
             return drink != '冰淇淋紅茶';
         });
         console.log(drinks_filter);
+
+        // reduce()
+        let total = scores.reduce(function(a,b){
+            // console.log(a);
+            // console.log(b);
+            return a + b;
+        });
+        let avg = total / scores.length
+        console.log(avg);
     </script>
 </body>
 </html>
