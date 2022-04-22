@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let obj = new Object();
+        // obj.name = 'John';
+        // obj.mail = 'asdf@gmail.com';
+
+        // let obj = {
+        //     name: 'Mary',
+        //     mail: 'trew#@gmail.com'
+        // }
+        // console.log(obj);
+
+        let menus = [
+            {
+                id: 1,
+                name: '阿薩姆紅茶',
+                price: 25
+            },
+            {
+                id: 2,
+                name: '茉莉綠茶',
+                price: 25
+            },
+            {
+                id: 3,
+                name: '珍珠奶茶',
+                price: 40
+            },
+            {
+                id: 4,
+                name: '拿鐵',
+                price: 75
+            }
+        ];
+        console.log(menus);
+
+        // for(let menu of menus){
+        //     console.log(menu.id);
+        //     console.log(menu.name);
+        //     console.log(menu.price);
+        // }
+        menus.forEach(function(menu,idx){
+            console.log(menu.id,idx);
+            console.log(menu.name,idx);
+            console.log(menu.price,idx);
+        })
+    </script>
+</body>
+</html>
