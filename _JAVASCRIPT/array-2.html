@@ -43,7 +43,18 @@
         let str = '阿薩姆紅茶___茉莉綠茶___珍珠奶茶___拿鐵___冰淇淋紅茶';
         console.log(str.split('___'));
 
-        console.log(drinks);
+        // indexOf() 
+
+        console.log(drinks.indexOf('拿鐵'));
+        console.log(drinks.indexOf('卡布奇諾'));
+
+        // concat();
+        let foods = ['滷肉飯','魷魚羹','燙青菜'];
+
+        // let eat = foods.concat(drinks);
+        let eat = drinks.concat(foods);
+
+        console.log(eat);
     </script>
 </body>
 </html>
