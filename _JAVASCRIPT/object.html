@@ -15,7 +15,7 @@
         // let obj = {
         //     name: 'Mary',
         //     mail: 'trew#@gmail.com'
-        // }
+        // } 
         // console.log(obj);
 
         let menus = [
@@ -52,6 +52,16 @@
             console.log(menu.name,idx);
             console.log(menu.price,idx);
         })
+
+        let drinks_name = menus.map(function(drink){
+            return  drink.name;
+        })
+        console.log(drinks_name);
+
+        let drinks_price = menus.map(function(data){
+            return data.price;
+        })
+        console.log(drinks_price);
     </script>
 </body>
 </html>
