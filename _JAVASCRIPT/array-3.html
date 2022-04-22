@@ -16,10 +16,16 @@
         });
 
         // map
-        let drinks_map = drinks.map(function(data){
-            return data.indexOf('拿鐵');
+        let scores = [45,87,93,72,56];
+        let scores_map = scores.map(function(data){
+            // if(data >= 60){
+            //     return '及格';
+            // }else{
+            //     return '不及格'
+            // }
+            return data >= 60 ? '及格':'不及格';
         })
-        console.log(drinks_map);
+        console.log(scores_map);
     </script>
 </body>
 </html>
