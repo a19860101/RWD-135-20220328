@@ -11,11 +11,11 @@
         let drinks = ['阿薩姆紅茶','茉莉綠茶','珍珠奶茶','拿鐵','冰淇淋紅茶'];
 
         // forEach
-        drinks.forEach(function(data){
-            console.log(data);
+        drinks.forEach(function(data,idx){
+            console.log(data,idx);
         });
 
-        // map
+        // map 對應
         let scores = [45,87,93,72,56];
         let scores_map = scores.map(function(data){
             // if(data >= 60){
@@ -26,6 +26,17 @@
             return data >= 60 ? '及格':'不及格';
         })
         console.log(scores_map);
+
+        //filter 篩選
+        let scores_filter = scores.filter(function(score){
+            // return score >= 60;
+            return score < 60;
+        });
+        console.log(scores_filter);
+        let drinks_filter = drinks.filter(function(drink){
+            return drink != '冰淇淋紅茶';
+        });
+        console.log(drinks_filter);
     </script>
 </body>
 </html>
