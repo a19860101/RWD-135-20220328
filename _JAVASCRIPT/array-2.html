@@ -25,7 +25,16 @@
         // 移除陣列第一筆資料
         drinks.shift();
 
+        // splice() 拼接
+
+        // drinks.splice(3,0,'梅子綠茶','八冰綠');
+        // drinks.splice(3,1);
+
+        // slice() 切片
+        let drinks_slice = drinks.slice(1,4);
+
         console.log(drinks);
+        console.log(drinks_slice);
     </script>
 </body>
 </html>
