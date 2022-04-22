@@ -62,6 +62,17 @@
             return data.price;
         })
         console.log(drinks_price);
+
+        let drinks_total = drinks_price.reduce(function(a,b){
+            return a + b;
+        })
+        console.log(drinks_total)
+
+        let expensive = menus.filter(function(data){
+            return data.price > 50;
+        })
+        console.log(expensive);
+
     </script>
 </body>
 </html>
