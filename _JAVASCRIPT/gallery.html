@@ -37,7 +37,11 @@
             //     let img = this.getAttribute('src');
             //     document.querySelector('.main').setAttribute('src',img);
             // }
-            t.onclick = e => {
+            // t.onclick = e => {
+            //     let img = e.target.getAttribute('src');
+            //     document.querySelector('.main').setAttribute('src',img);
+            // }
+            t.onclick = function(e){
                 let img = e.target.getAttribute('src');
                 document.querySelector('.main').setAttribute('src',img);
             }
