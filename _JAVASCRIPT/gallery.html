@@ -33,8 +33,12 @@
     <script>
         let thumb = document.querySelectorAll('.thumb');
         for(t of thumb){
-            t.onclick = function(){
-                let img = this.getAttribute('src');
+            // t.onclick = function(){
+            //     let img = this.getAttribute('src');
+            //     document.querySelector('.main').setAttribute('src',img);
+            // }
+            t.onclick = e => {
+                let img = e.target.getAttribute('src');
                 document.querySelector('.main').setAttribute('src',img);
             }
         }
