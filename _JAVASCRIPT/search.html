@@ -22,11 +22,22 @@
     <script>
         function search(){
             let search_text = document.querySelector('#search_text').value;
+            let li = document.querySelectorAll('li');
+            for(data of li){
+                if(data.textContent.indexOf(search_text) > -1){
+                    // data.style.display = '';
+                    data.style.backgroundColor = 'lime';
+                }else{
+                    // data.style.display = 'none';
+                    data.style.backgroundColor = 'transparent';
+                }
+            }
         }
-        let li = document.querySelectorAll('li');
-        for(data of li){
-            console.log(data.textContent);
-        }
+
+        let s = 'hello world';
+
+        console.log(s.indexOf('hello'));
+        
     </script>
 </body>
 </html>
