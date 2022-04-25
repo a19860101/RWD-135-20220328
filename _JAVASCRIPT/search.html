@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="search_text">
+    <button onclick="search()">click</button>
+    <ul>
+        <li>Azure DevOps顧問實戰</li>
+        <li>金魚都能懂的 CSS 必學屬性：網頁設計必備寶典（iT邦幫忙鐵人賽系列書）</li>
+        <li>ASP.NET Core 6 實戰守則：超易懂的跨平台開發入門教學 (iT邦幫忙鐵人賽系列書)</li>
+        <li>內行人才知道的系統設計面試指南</li>
+        <li>Visual Studio Code 實用指南：官方文件沒有詳述的 Extension 觀念、命令組合技與鍵位客製化技巧（iT邦幫忙鐵人賽系列書）</li>
+        <li>圖解 Docker & Kubernetes 的知識與使用方法</li>
+        <li>Python 教學手冊</li>
+        <li>Software Architecture in Practice, 4/e (繁體中文版)</li> 
+    </ul>
+    <script>
+        function search(){
+            let search_text = document.querySelector('#search_text').value;
+            console.log(search_text);
+        }
+
+    </script>
+</body>
+</html>
