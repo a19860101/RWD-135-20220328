@@ -30,5 +30,14 @@
             <img src="https://picsum.photos/id/16/600" class="thumb">
         </div>
     </div>
+    <script>
+        let thumb = document.querySelectorAll('.thumb');
+        for(t of thumb){
+            t.onclick = function(){
+                let img = this.getAttribute('src');
+                document.querySelector('.main').setAttribute('src',img);
+            }
+        }
+    </script>
 </body>
 </html>
