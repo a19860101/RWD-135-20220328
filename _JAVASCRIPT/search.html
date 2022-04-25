@@ -22,9 +22,11 @@
     <script>
         function search(){
             let search_text = document.querySelector('#search_text').value;
-            console.log(search_text);
         }
-
+        let li = document.querySelectorAll('li');
+        for(data of li){
+            console.log(data.textContent);
+        }
     </script>
 </body>
 </html>
