@@ -27,18 +27,43 @@
     <a href="#">link</a>
     <script>
         let title = document.getElementById('title');
-        console.log(title);
-        
+        // console.log(title);
+
         let contents = document.getElementsByClassName('content');
-        console.log(contents);//HTMLCollection 類陣列
+        // console.log(contents);
+        //HTMLCollection 類陣列
 
         let content = document.getElementsByClassName('content');
-        console.log(content[0]);
-        console.log(content[1]);
-        console.log(content[2]);
+        // console.log(content[0]);
+        // console.log(content[1]);
+        // console.log(content[2]);
 
         let lis = document.getElementsByTagName('li');
-        console.log(lis);//HTMLCollection 類陣列
+        // console.log(lis);
+        //HTMLCollection 類陣列
+
+        let title2 = document.querySelector('#title');
+        console.log(title2);
+
+        let contents2 = document.querySelectorAll('.content');
+        console.log(contents2);
+        console.log(contents2[0]);
+        console.log(contents2[1]);
+        console.log(contents2[2]);
+        // NodeList 類陣列
+        let content2 = document.querySelector('.content');
+        console.log(content2);
+
+        let lis2 = document.querySelectorAll('li');
+        console.log(lis2);
+        console.log(lis2[0]);
+        console.log(lis2[1]);
+        console.log(lis2[2]);
+        console.log(lis2[3]);
+
+        let li = document.querySelector('li');
+        console.log(li);
+
     </script>
 </body>
 </html>
