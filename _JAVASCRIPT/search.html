@@ -7,8 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" id="search_text">
-    <button onclick="search()">click</button>
+    <input type="text" id="search_text" onkeyup="search()">
+    <!-- <button onclick="search()">click</button> -->
     <ul>
         <li>Azure DevOps顧問實戰</li>
         <li>金魚都能懂的 CSS 必學屬性：網頁設計必備寶典（iT邦幫忙鐵人賽系列書）</li>
@@ -24,12 +24,12 @@
             let search_text = document.querySelector('#search_text').value;
             let li = document.querySelectorAll('li');
             for(data of li){
-                if(data.textContent.indexOf(search_text) > -1){
-                    // data.style.display = '';
-                    data.style.backgroundColor = 'lime';
+                if(data.textContent.toUpperCase().indexOf(search_text.toUpperCase()) > -1){
+                    data.style.display = '';
+                    // data.style.backgroundColor = 'lime';
                 }else{
-                    // data.style.display = 'none';
-                    data.style.backgroundColor = 'transparent';
+                    data.style.display = 'none';
+                    // data.style.backgroundColor = 'transparent';
                 }
             }
         }
