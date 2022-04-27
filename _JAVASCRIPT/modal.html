@@ -17,6 +17,7 @@
         }
         .modal.active {
             display: block;
+            animation: fadeIn 600ms;
         }
         .modal-overlay {
             position: fixed;
@@ -37,6 +38,12 @@
             top: 50%;
             transform: translate(-50%,-50%);
         }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+        }
+
     </style>
 </head>
 <body>
