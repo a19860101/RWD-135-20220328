@@ -47,9 +47,9 @@
 <body>
     <div class="tab">
         <div class="tab-nav">
-            <a href="#" class="tab-link active">tab-1</a>
-            <a href="#" class="tab-link">tab-2</a>
-            <a href="#" class="tab-link">tab-3</a>
+            <a href="#tab-1" class="tab-link active">tab-1</a>
+            <a href="#tab-2" class="tab-link">tab-2</a>
+            <a href="#tab-3" class="tab-link">tab-3</a>
         </div>
         <div id="tab-1" class="tab-panel active">
             <h2>tab 1</h2>
@@ -101,6 +101,12 @@
                 console.log(e.target);
                 document.querySelector('.tab-link.active').classList.remove('active');
                 e.target.classList.add('active');
+
+                let href = e.target.getAttribute('href');
+                console.log(href);
+                
+                document.querySelector('.tab-panel.active').classList.remove('active');
+                document.querySelector(href).classList.add('active');
             }
         }
     </script>
