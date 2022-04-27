@@ -43,7 +43,7 @@
     <a href="#" class="modal-btn" data-modal="#modal-1">Modal 1</a>
     <a href="#" class="modal-btn" data-modal="#modal-2">Modal 2</a>
     <div id="modal-1" class="modal">
-        <div class="modal-overlay"></div>
+        <div class="modal-overlay modal-close"></div>
         <div class="modal-container">
             <div class="modal-header">
                 <h3>modal 1</h3>
@@ -62,10 +62,11 @@
         </div>
     </div>
     <div id="modal-2" class="modal">
-        <div class="modal-overlay"></div>
+        <div class="modal-overlay modal-close"></div>
         <div class="modal-container">
             <div class="modal-header">
                 <h3>modal 2</h3>
+
             </div>
             <div class="modal-body">
                 <p>
@@ -87,6 +88,14 @@
                 let modal = e.target.dataset.modal;
                 document.querySelector(modal).classList.add('active');
             } 
+        }
+
+        document.body.onclick = e => {
+            // console.log(e.target.className);
+            // console.log(e.target.classList);
+            if(e.target.className.indexOf('modal-close') > -1){
+                document.querySelector('.modal.active').classList.remove('active');
+            }
         }
     </script>
 </body>
