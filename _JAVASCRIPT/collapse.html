@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #collapse-1 {
+            width: 600px;
+        }
+        .collapse-panel {
+            background-color: #ccc;
+            padding:0 10px;
+            height: 0;
+            overflow: hidden;
+        }
+        .collapse-panel.active {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <a href="#collapse-1" class="collapse-btn">click</a>
+    <div class="collapse-panel" id="collapse-1">
+        <h2>title</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ducimus exercitationem magnam voluptatum voluptates labore iste nisi, repudiandae corrupti ipsum ad nesciunt maxime placeat optio ullam temporibus, unde quas officiis!`
+        </p>
+    </div>
+    <script>
+        let collapseBtns = document.querySelectorAll('.collapse-btn');
+        for(btn of collapseBtns){
+            btn.onclick = e => {
+                let panel = e.target.nextElementSibling;
+                console.log(panel);
+                panel.classList.toggle('active');
+            }
+        }
+    </script>
+</body>
+</html>
