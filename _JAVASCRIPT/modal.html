@@ -61,7 +61,7 @@
             </div>
         </div>
     </div>
-    <div id="modal-2" class="modal active">
+    <div id="modal-2" class="modal">
         <div class="modal-overlay"></div>
         <div class="modal-container">
             <div class="modal-header">
@@ -80,5 +80,14 @@
             </div>
         </div>
     </div>
+    <script>
+        let modalBtns = document.querySelectorAll('.modal-btn');
+        for(modalBtn of modalBtns){
+            modalBtn.onclick = e => {
+                let modal = e.target.dataset.modal;
+                document.querySelector(modal).classList.add('active');
+            } 
+        }
+    </script>
 </body>
 </html>
