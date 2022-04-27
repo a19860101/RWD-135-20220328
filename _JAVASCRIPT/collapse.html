@@ -12,8 +12,11 @@
         .collapse-panel {
             background-color: #ccc;
             padding:0 10px;
-            height: 0;
+            height: 0px;
             overflow: hidden;
+            transition: 600ms;
+
+            box-sizing: content-box;
         }
         .collapse-panel.active {
             padding: 10px;
@@ -27,14 +30,27 @@
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ducimus exercitationem magnam voluptatum voluptates labore iste nisi, repudiandae corrupti ipsum ad nesciunt maxime placeat optio ullam temporibus, unde quas officiis!`
         </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ducimus exercitationem magnam voluptatum voluptates labore iste nisi, repudiandae corrupti ipsum ad nesciunt maxime placeat optio ullam temporibus, unde quas officiis!`
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ducimus exercitationem magnam voluptatum voluptates labore iste nisi, repudiandae corrupti ipsum ad nesciunt maxime placeat optio ullam temporibus, unde quas officiis!`
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ducimus exercitationem magnam voluptatum voluptates labore iste nisi, repudiandae corrupti ipsum ad nesciunt maxime placeat optio ullam temporibus, unde quas officiis!`
+        </p>
     </div>
     <script>
         let collapseBtns = document.querySelectorAll('.collapse-btn');
         for(btn of collapseBtns){
             btn.onclick = e => {
                 let panel = e.target.nextElementSibling;
-                console.log(panel);
                 panel.classList.toggle('active');
+                if(panel.style.height){
+                    panel.style.height= null;
+                }else{
+                    panel.style.height = panel.scrollHeight + 'px';
+                }
             }
         }
     </script>
