@@ -18,10 +18,13 @@
         .tab {
             width: 600px;
             margin: auto;
+            position: relative;
         }
         .tab-nav {
             background-color: #F8ECD1;
             display: flex;
+            position: relative;
+            z-index: 10;
         }
         .tab-link {
             text-decoration: none;
@@ -37,10 +40,23 @@
         .tab-panel {
             padding: 30px 10px;
             background-color: #AC7D88;
-            display: none;
+            position: absolute;
+            opacity: 0;
+            transition: 600ms;
+            z-index: -1;
+            transform: translateY(-30px);
         }
         .tab-panel.active {
-            display: block;
+            /* animation: fadeIn 600ms; */
+            opacity: 1;
+            z-index: 5;
+            transform: translateY(0);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity:0;
+                transform: translateY(-30px);
+            }
         }
     </style>
 </head>
