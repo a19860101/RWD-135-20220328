@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            margin: auto;
+            width: 300px;
+            height: 300px;
+            background-color: #7cf0ff;
+            padding: 30px;
+            border: 2px solid #000;
+
+            box-sizing: conteng-box;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quod perferendis numquam facilis velit autem et perspiciatis, officiis earum quia porro repellendus sapiente quam, cumque placeat quae asperiores dolores repellat!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quod perferendis numquam facilis velit autem et perspiciatis, officiis earum quia porro repellendus sapiente quam, cumque placeat quae asperiores dolores repellat!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quod perferendis numquam facilis velit autem et perspiciatis, officiis earum quia porro repellendus sapiente quam, cumque placeat quae asperiores dolores repellat!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quod perferendis numquam facilis velit autem et perspiciatis, officiis earum quia porro repellendus sapiente quam, cumque placeat quae asperiores dolores repellat!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quod perferendis numquam facilis velit autem et perspiciatis, officiis earum quia porro repellendus sapiente quam, cumque placeat quae asperiores dolores repellat!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quod perferendis numquam facilis velit autem et perspiciatis, officiis earum quia porro repellendus sapiente quam, cumque placeat quae asperiores dolores repellat!
+    </div>
+    <script>
+        let box = document.querySelector('.box');
+        console.log(box.offsetHeight);//height+padding+border
+        console.log(box.clientHeight);//height+padding
+        console.log(box.scrollHeight);//height+padding+overflow
+
+
+    </script>
+</body>
+</html>
