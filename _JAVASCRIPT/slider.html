@@ -59,5 +59,20 @@
             <a href="#" class="slider-next">next</a>
         </div>
     </div>
+    <script>
+        let imgs = document.querySelectorAll('.slider-item');
+        let totalImgs = imgs.length;
+        let next = document.querySelector('.slider-next');
+        let prev = document.querySelector('.slider-prev');
+        let currentIndex = 0;
+        
+
+        function show(){
+            // currentIndex = currentIndex + 1;
+            currentIndex = (currentIndex + 1) % totalImgs;
+            console.log(currentIndex)
+        }
+        setInterval(show,1000);
+    </script>
 </body>
 </html>
