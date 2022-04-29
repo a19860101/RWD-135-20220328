@@ -6,7 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <style>
+        .slider {
+            width: 1200px;
+            margin: auto;
+            position: relative;
+        }
+        img {
+            width: 100%;
+        }
+        .slider-wrapper {
+            display: flex;
+            /* width: 7200px; */
+        }
+        .slider-item {
+            width: 1200px;
+            height: 600px;
+        }
+        .slider-nav {
+            background-color: rgb(255 255 255 / .2);
+            backdrop-filter: blur(2px);
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            text-align: center;
+            padding: 15px 0;
+        }
+        .slider-nav a {
+            text-decoration: none;
+            color: #000;
+        }
+    </style>
 </head>
 <body>
     <div class="slider">
