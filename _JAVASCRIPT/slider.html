@@ -5,6 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .slider {
+            width: 1200px;
+            height: 600px;
+            margin: auto;
+            position: relative;
+        }
+        .slider-item {
+            position: absolute;
+            opacity: 0;
+            z-index: -1;
+        }
+        .slider-item.active {
+            opacity: 1;
+        }
+        .slider-nav {
+            background-color: #ff9898;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            text-align: center;
+            padding: 15px 0;
+        }
+        .slider-nav a {
+            
+            color: #000;
+        }
+    </style>
 </head>
 <body>
     <div class="slider">
