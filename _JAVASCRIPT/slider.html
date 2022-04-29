@@ -16,6 +16,7 @@
             position: absolute;
             opacity: 0;
             z-index: -1;
+            transition: 500ms;
         }
         .slider-item.active {
             opacity: 1;
@@ -60,27 +61,32 @@
         </div>
     </div>
     <script>
-        let imgs = document.querySelectorAll('.slider-item');
+        // let imgs = document.querySelectorAll('.slider-item');
+        // let imgs = Array.from(document.querySelectorAll('.slider-item'));
+        let imgs = [...document.querySelectorAll('.slider-item')];
         let totalImgs = imgs.length;
         let next = document.querySelector('.slider-next');
         let prev = document.querySelector('.slider-prev');
         let currentIndex = 0;
         
+        console.log(imgs);
 
         function show(){
             // currentIndex = currentIndex + 1;
             currentIndex = (currentIndex + 1) % totalImgs;
             console.log(currentIndex);
 
-            // for(idx in imgs){
-            //     console.log(idx);
-            // }
-            for(let i=0; i<totalImgs; i++){
-                imgs[i].classList.remove('active');
+            for(idx in imgs){
+                console.log(idx);
+                imgs[idx].classList.remove('active');
             }
+            // for(let i=0; i<totalImgs; i++){
+            //     imgs[i].classList.remove('active');
+            // }
             imgs[currentIndex].classList.add('active');
         }
-        setInterval(show,1000);
+        // show();
+        setInterval(show,3000);
     </script>
 </body>
 </html>
