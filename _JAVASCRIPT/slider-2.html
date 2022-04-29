@@ -18,6 +18,7 @@
         .slider-wrapper {
             display: flex;
             /* width: 7200px; */
+            transition: 600ms;
         }
         .slider-item {
             width: 1200px;
@@ -69,5 +70,25 @@
             </a>
         </div>
     </div>
+    <script>
+        let imgs = [...document.querySelectorAll('.slider-item')];
+        let totalImgs = imgs.length;
+        let imgWidth = 1200;
+        let wrapperWidth = imgWidth * totalImgs;
+        let wrapper = document.querySelector('.slider-wrapper');
+        wrapper.style.width = wrapperWidth + 'px';
+        let next = document.querySelector('.slider-next');
+        let prev = document.querySelector('.slider-prev');
+        let currentIndex = 0;
+
+        function show(){
+            currentIndex = (currentIndex + 1) % totalImgs;
+            console.log(currentIndex)
+
+            wrapper.style.marginLeft = -(imgWidth * currentIndex) + 'px';
+        }
+
+        setInterval(show,3000)
+    </script>
 </body>
 </html>
