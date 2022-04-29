@@ -71,10 +71,20 @@
         
         console.log(imgs);
 
-        function show(){
-            // currentIndex = currentIndex + 1;
-            currentIndex = (currentIndex + 1) % totalImgs;
-            console.log(currentIndex);
+        next.onclick = () => { show('next'); }
+        prev.onclick = () => { show('prev'); }
+
+
+        function show(direction){
+            
+            if(direction == 'next' ){
+                // currentIndex = currentIndex + 1;
+                currentIndex = (currentIndex + 1) % totalImgs;
+                console.log(currentIndex);
+            }else{
+                currentIndex = currentIndex == 0 ? totalImgs : currentIndex;
+                currentIndex = (currentIndex - 1) % totalImgs;
+            }
 
             for(idx in imgs){
                 console.log(idx);
@@ -86,7 +96,7 @@
             imgs[currentIndex].classList.add('active');
         }
         // show();
-        setInterval(show,3000);
+        // setInterval(show,3000);
     </script>
 </body>
 </html>
