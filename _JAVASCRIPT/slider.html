@@ -70,7 +70,15 @@
         function show(){
             // currentIndex = currentIndex + 1;
             currentIndex = (currentIndex + 1) % totalImgs;
-            console.log(currentIndex)
+            console.log(currentIndex);
+
+            // for(idx in imgs){
+            //     console.log(idx);
+            // }
+            for(let i=0; i<totalImgs; i++){
+                imgs[i].classList.remove('active');
+            }
+            imgs[currentIndex].classList.add('active');
         }
         setInterval(show,1000);
     </script>
