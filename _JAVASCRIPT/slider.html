@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         .slider {
             width: 1200px;
@@ -22,7 +23,8 @@
             opacity: 1;
         }
         .slider-nav {
-            background-color: #ff9898;
+            background-color: rgb(255 255 255 / .2);
+            backdrop-filter: blur(2px);
             position: absolute;
             width: 100%;
             bottom: 0;
@@ -30,7 +32,7 @@
             padding: 15px 0;
         }
         .slider-nav a {
-            
+            text-decoration: none;
             color: #000;
         }
     </style>
@@ -56,8 +58,12 @@
             <img src="https://picsum.photos/id/17/1200/600" alt="">
         </div>
         <div class="slider-nav">
-            <a href="#" class="slider-prev">prev</a>
-            <a href="#" class="slider-next">next</a>
+            <a href="#" class="slider-prev">
+                <i class="fa-solid fa-circle-chevron-left fa-2x"></i>
+            </a>
+            <a href="#" class="slider-next">
+                <i class="fa-solid fa-circle-chevron-right fa-2x"></i>
+            </a>
         </div>
     </div>
     <script>
@@ -96,7 +102,9 @@
             imgs[currentIndex].classList.add('active');
         }
         // show();
-        setInterval(show,3000);
+        setInterval('show(\'next\')',3000);
+        // setInterval('show("next")',3000);
+        // 當單引號內還有其他的單引號時，可轉為雙引號或使用反斜線(\)跳脫
     </script>
 </body>
 </html>
