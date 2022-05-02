@@ -7,6 +7,9 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="container">
+        <h1>目前天氣</h1>
+    </div>
     <!-- b1ecbccd638b763d489602917ba47cc3 -->
     <!-- 
         攝氏: metric
@@ -18,6 +21,23 @@
         .then(res => res.json())
         .then(data => {
             console.log(data);
+            
+            let desc = document.createElement('div');
+            desc.className = 'desc';
+            desc.append(data.weather[0].description);
+
+            let feels_like = document.createElement('div');
+            feels_like.className = 'feels_like';
+            feels_like.append(data.main.feels_like);
+
+            let temp = document.createElement('div');
+            temp.className = 'temp';
+            temp.append(data.main.temp);
+
+
+            document.querySelector('.container').append(desc,feels_like,temp);
+
+            
         })
     </script>
 </body>
