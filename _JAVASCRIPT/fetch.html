@@ -5,8 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .box {
+            background-color: #ccc;
+            padding: 15px;
+            margin: 15px;
+        }
+    </style>
 </head>
 <body>
+    <div class="container"></div>
     <script>
         fetch('data.json')
         .then(function(response){
@@ -22,9 +30,21 @@
             // console.log(prices);
 
             data.forEach(books => {
-                console.log(books.title);
-                console.log(books.price);
-                console.log(books.author);
+                let container = document.querySelector('.container');
+                let h2 = document.createElement('h2');
+                h2.append(books.title);
+
+                let author = document.createElement('div');
+                author.append(books.author)
+            
+                let box = document.createElement('div');
+                box.append(h2,author);
+                box.className = 'box';
+                // box.classList.add('box');
+                // box.setAttribute('class','box');
+
+                container.append(box);
+
             })
 
         })
