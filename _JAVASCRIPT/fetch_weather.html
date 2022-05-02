@@ -22,6 +22,9 @@
         .then(data => {
             console.log(data);
 
+            let icon = document.createElement('img');
+            icon.setAttribute('src',` http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
+
             let desc = document.createElement('div');
             desc.className = 'desc';
             desc.append(data.weather[0].description);
@@ -37,7 +40,7 @@
             temp.append(`均溫:${data.main.temp}℃`);
 
 
-            document.querySelector('.container').append(desc,feels_like,temp);
+            document.querySelector('.container').append(icon,desc,feels_like,temp);
 
             
         })
