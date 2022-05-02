@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">title</h1>
+        <p class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta cum deleniti temporibus doloribus similique minima officiis quam ipsum dolores earum laboriosam et voluptatum quia harum numquam nesciunt nulla, qui nemo!
+        </p>
+        <ul>
+            <li class="item">list 1</li>
+            <li class="item">list 2</li>
+            <li class="item">list 3</li>
+            <li class="item">list 4</li>
+            <li class="item">list 5</li>
+        </ul>
+        <a href="#" class="link">link</a>
+    </div>
+    <script>
+        let el = document.querySelector('.content');
+        // console.log(el);
+
+        //父層
+        console.log(el.parentElement);
+        console.log(el.parentNode);
+
+        //子層
+        console.log(el.children);
+        console.log(el.childNodes);
+        
+        //同輩
+        console.log(el.nextElementSibling);
+        console.log(el.previousElementSibling)
+
+        console.log(el.nextSibling);
+        console.log(el.previousSibling);
+        // 文字節點(換行)、註解節點、元素節點
+
+    </script>
+</body>
+</html>
