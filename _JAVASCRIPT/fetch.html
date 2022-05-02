@@ -14,7 +14,19 @@
             return response.json();
         })
         .then(function(data){
-            console.log(data);
+            // console.log(data);
+            let titles = data.map(function(books){
+                return books.title;
+            });
+            let prices = data.map(books => books.price);
+            // console.log(prices);
+
+            data.forEach(books => {
+                console.log(books.title);
+                console.log(books.price);
+                console.log(books.author);
+            })
+
         })
     </script>
 </body>
