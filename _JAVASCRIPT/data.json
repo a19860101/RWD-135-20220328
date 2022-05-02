@@ -1,0 +1,26 @@
+[
+    {
+        "title": "跨平台 App + Web API 實戰：使用 Flutter 和 ASP.NET Core 開發尋寶遊戲",
+        "public": "博碩文化",
+        "author": "陳明山(Bruce)",
+        "price": "420"
+    },
+    {
+        "title": "PHP、MySQ L與 JavaScript 學習手冊, 6/e (Learning PHP, MySQL & JavaScript, 6/e)",
+        "public": "歐萊禮",
+        "author": "Robin Nixon 著 賴屹民 譯",
+        "price": "980"
+    },
+    {
+        "title": "HTML5、CSS3、JavaScript、Bootstrap5、jQuery、jQuery Mobile 跨裝置網頁設計, 5/e",
+        "public": "碁峰資訊",
+        "author": "陳惠貞",
+        "price": "540"
+    },
+    {
+        "title": "精通 JavaScript, 3/e (Eloquent JavaScript, 3/e)",
+        "public": "碁峰資訊",
+        "author": "Marijn Haverbeke 著 黃詩涵 譯",
+        "price": "580"
+    }
+]
