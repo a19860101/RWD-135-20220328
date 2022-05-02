@@ -29,12 +29,12 @@
             let feels_like = document.createElement('div');
             feels_like.className = 'feels_like';
             // feels_like.append('體感溫度:' + data.main.feels_like);
-            feels_like.append(`體感溫度:${data.main.feels_like}`);
+            feels_like.append(`體感溫度:${data.main.feels_like}℃`);
             //字串樣板
             let temp = document.createElement('div');
             temp.className = 'temp';
             // temp.append('均溫:' + data.main.temp);
-            temp.append(`均溫:${data.main.temp}`);
+            temp.append(`均溫:${data.main.temp}℃`);
 
 
             document.querySelector('.container').append(desc,feels_like,temp);
