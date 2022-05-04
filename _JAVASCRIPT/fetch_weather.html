@@ -22,6 +22,19 @@
         .then(data => {
             console.log(data);
 
+            let dt = document.createElement('div');
+            dt.className = 'dt';
+            let myDate = new Date(data.dt * 1000);
+            let year = myDate.getFullYear();
+            let month = myDate.getMonth() + 1;
+            let date = myDate.getDate();
+            let day = myDate.getDay();
+            let hours = myDate.getHours();
+            let minutes = myDate.getMinutes();
+            let seconds = myDate.getSeconds();
+
+            console.log(year,month,date,day,hours,minutes,seconds);
+
             let icon = document.createElement('img');
             icon.setAttribute('src',` http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
 
