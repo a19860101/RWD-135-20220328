@@ -26,14 +26,20 @@
             dt.className = 'dt';
             let myDate = new Date(data.dt * 1000);
             let year = myDate.getFullYear();
-            let month = myDate.getMonth() + 1;
+            let month = myDate.getMonth()+1;
             let date = myDate.getDate();
             let day = myDate.getDay();
             let hours = myDate.getHours();
             let minutes = myDate.getMinutes();
             let seconds = myDate.getSeconds();
 
-            console.log(year,month,date,day,hours,minutes,seconds);
+            let monthArray = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+            let dayArray = ['日','一','二','三','四','五','六'];
+            let fullDayArray = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+            let dayArray_en = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+            let dayArray_jp = ['日','月','火','水','木','金','土'];
+            console.log(year,monthArray[month - 1],date,dayArray_jp[day],hours,minutes,seconds);
 
             let icon = document.createElement('img');
             icon.setAttribute('src',` http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
