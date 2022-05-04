@@ -39,7 +39,10 @@
             let fullDayArray = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
             let dayArray_en = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
             let dayArray_jp = ['日','月','火','水','木','金','土'];
-            console.log(year,monthArray[month - 1],date,dayArray_jp[day],hours,minutes,seconds);
+            console.log(year,monthArray[month - 1],date,dayArray[day],hours,minutes,seconds);
+
+            dt.append(`${year}/${month}/${date} 星期${dayArray[day]}`);
+            // dt.append(`${monthArray[month-1]} ${date} 星期${dayArray[day]}`);
 
             let icon = document.createElement('img');
             icon.setAttribute('src',` http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
@@ -59,7 +62,7 @@
             temp.append(`均溫:${data.main.temp}℃`);
 
 
-            document.querySelector('.container').append(icon,desc,feels_like,temp);
+            document.querySelector('.container').append(dt,icon,desc,feels_like,temp);
 
             
         })
