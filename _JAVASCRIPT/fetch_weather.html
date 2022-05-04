@@ -16,8 +16,8 @@
         <option value="seoul">首爾</option>
         <option value="bangkok">曼谷</option>
     </select>
+    <h1>目前天氣</h1>
     <div class="container">
-        <h1>目前天氣</h1>
     </div>
     <!-- b1ecbccd638b763d489602917ba47cc3 -->
     <!-- 
@@ -29,57 +29,60 @@
         city.onchange = e => {
             let q = e.target.value;
             console.log(q);
+            // let url = 'https://api.openweathermap.org/data/2.5/weather?q=osaka&appid=b1ecbccd638b763d489602917ba47cc3&lang=zh_TW&units=metric';
+            let url = `https://api.openweathermap.org/data/2.5/weather?q=${q}&appid=b1ecbccd638b763d489602917ba47cc3&lang=zh_TW&units=metric`;
+            document.querySelector('.container').textContent = '';
+            fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+
+                let dt = document.createElement('div');
+                dt.className = 'dt';
+                let myDate = new Date(data.dt * 1000);
+                let year = myDate.getFullYear();
+                let month = myDate.getMonth()+1;
+                let date = myDate.getDate();
+                let day = myDate.getDay();
+                let hours = myDate.getHours();
+                let minutes = myDate.getMinutes();
+                let seconds = myDate.getSeconds();
+
+                let monthArray = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+                let dayArray = ['日','一','二','三','四','五','六'];
+                let fullDayArray = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+                let dayArray_en = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+                let dayArray_jp = ['日','月','火','水','木','金','土'];
+                console.log(year,monthArray[month - 1],date,dayArray[day],hours,minutes,seconds);
+
+                dt.append(`${year}/${month}/${date} 星期${dayArray[day]}`);
+                // dt.append(`${monthArray[month-1]} ${date} 星期${dayArray[day]}`);
+
+                let icon = document.createElement('img');
+                icon.setAttribute('src',` http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
+
+                let desc = document.createElement('div');
+                desc.className = 'desc';
+                desc.append(data.weather[0].description);
+
+                let feels_like = document.createElement('div');
+                feels_like.className = 'feels_like';
+                // feels_like.append('體感溫度:' + data.main.feels_like);
+                feels_like.append(`體感溫度:${data.main.feels_like}℃`);
+                //字串樣板
+                let temp = document.createElement('div');
+                temp.className = 'temp';
+                // temp.append('均溫:' + data.main.temp);
+                temp.append(`均溫:${data.main.temp}℃`);
+
+
+                document.querySelector('.container').append(dt,icon,desc,feels_like,temp);
+
+                
+            })
         }
-        let url = 'https://api.openweathermap.org/data/2.5/weather?q=osaka&appid=b1ecbccd638b763d489602917ba47cc3&lang=zh_TW&units=metric';
-        fetch(url)
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-
-            let dt = document.createElement('div');
-            dt.className = 'dt';
-            let myDate = new Date(data.dt * 1000);
-            let year = myDate.getFullYear();
-            let month = myDate.getMonth()+1;
-            let date = myDate.getDate();
-            let day = myDate.getDay();
-            let hours = myDate.getHours();
-            let minutes = myDate.getMinutes();
-            let seconds = myDate.getSeconds();
-
-            let monthArray = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-
-            let dayArray = ['日','一','二','三','四','五','六'];
-            let fullDayArray = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
-            let dayArray_en = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-            let dayArray_jp = ['日','月','火','水','木','金','土'];
-            console.log(year,monthArray[month - 1],date,dayArray[day],hours,minutes,seconds);
-
-            dt.append(`${year}/${month}/${date} 星期${dayArray[day]}`);
-            // dt.append(`${monthArray[month-1]} ${date} 星期${dayArray[day]}`);
-
-            let icon = document.createElement('img');
-            icon.setAttribute('src',` http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
-
-            let desc = document.createElement('div');
-            desc.className = 'desc';
-            desc.append(data.weather[0].description);
-
-            let feels_like = document.createElement('div');
-            feels_like.className = 'feels_like';
-            // feels_like.append('體感溫度:' + data.main.feels_like);
-            feels_like.append(`體感溫度:${data.main.feels_like}℃`);
-            //字串樣板
-            let temp = document.createElement('div');
-            temp.className = 'temp';
-            // temp.append('均溫:' + data.main.temp);
-            temp.append(`均溫:${data.main.temp}℃`);
-
-
-            document.querySelector('.container').append(dt,icon,desc,feels_like,temp);
-
-            
-        })
+       
     </script>
 </body>
 </html>
