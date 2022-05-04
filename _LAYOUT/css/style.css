@@ -25,11 +25,17 @@ nav {
 }
 .nav-group {
     width: 100%;
-    display: none;
+    display: flex;
     flex-direction: column;
+
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
 }
 .nav-group.open {
     display: flex;
+
+    opacity: 1;
 
 }
 .nav-link {
@@ -72,6 +78,7 @@ nav {
     display: flex;
     flex-direction: column;
 }
+
 
 @media (min-width: 600px){
     nav {
