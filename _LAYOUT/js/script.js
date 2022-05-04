@@ -31,5 +31,7 @@ window.onload = function () {
         if (e.target.className.indexOf("modal-close") > -1) {
             document.querySelector(".modal.active").classList.remove("active");
         }
+        e.preventDefault();
+        return false;
     };
 };
