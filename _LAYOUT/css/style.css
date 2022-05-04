@@ -345,7 +345,7 @@ footer {
     left: 0;
 
     z-index: -1;
-    transition:background-color 600ms 600ms;
+    transition:background-color 600ms 600ms,z-index 600ms 750ms;
     /* transition: 600ms; */
 }
 .modal.active .modal-overlay {
@@ -366,7 +366,7 @@ footer {
 
     opacity: 0;
     z-index: -1;
-    transition:opacity 600ms;
+    transition:opacity 600ms,z-index 600ms 600ms;
 }
 .modal.active .modal-container {
     opacity: 1;
