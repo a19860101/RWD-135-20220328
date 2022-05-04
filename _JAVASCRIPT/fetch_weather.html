@@ -7,6 +7,15 @@
     <title>Document</title>
 </head>
 <body>
+    <select name="" id="city">
+        <option>--請選擇--</option>
+        <option value="taipei">台北</option>
+        <option value="Kaohsiung">高雄</option>
+        <option value="tokyo">東京</option>
+        <option value="osaka">大阪</option>
+        <option value="seoul">首爾</option>
+        <option value="bangkok">曼谷</option>
+    </select>
     <div class="container">
         <h1>目前天氣</h1>
     </div>
@@ -16,7 +25,12 @@
         華氏: imperial
      -->
     <script>
-        let url = 'https://api.openweathermap.org/data/2.5/weather?q=taipei&appid=b1ecbccd638b763d489602917ba47cc3&lang=zh_TW&units=metric';
+        let city = document.querySelector('#city');
+        city.onchange = e => {
+            let q = e.target.value;
+            console.log(q);
+        }
+        let url = 'https://api.openweathermap.org/data/2.5/weather?q=osaka&appid=b1ecbccd638b763d489602917ba47cc3&lang=zh_TW&units=metric';
         fetch(url)
         .then(res => res.json())
         .then(data => {
