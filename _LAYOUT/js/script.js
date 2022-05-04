@@ -17,7 +17,6 @@ window.onload = function () {
     let modalBtns = document.querySelectorAll(".modal-btn");
     for (modalBtn of modalBtns) {
         modalBtn.onclick = (e) => {
-            // let modal = e.target.dataset.modal;
             let modal = e.target.getAttribute('href');
             document.querySelector(modal).classList.add("active");
             e.preventDefault();
@@ -26,12 +25,11 @@ window.onload = function () {
     }
 
     document.body.onclick = (e) => {
-        // console.log(e.target.className);
-        // console.log(e.target.classList);
         if (e.target.className.indexOf("modal-close") > -1) {
             document.querySelector(".modal.active").classList.remove("active");
+            e.preventDefault();
+            return false;
         }
-        e.preventDefault();
-        return false;
+        
     };
 };
