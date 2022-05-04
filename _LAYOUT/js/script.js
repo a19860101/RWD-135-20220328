@@ -4,6 +4,12 @@ window.onload = function () {
 
     console.log(navToggle);
     navToggle.onclick = e => {
-        console.log(e.target);
+        let navGroup = document.querySelector('.nav-group');
+        navGroup.classList.toggle('open');
+        if(navGroup.style.height){
+            navGroup.style.height = null;
+        }else{
+            navGroup.style.height = navGroup.scrollHeight + 'px';
+        }
     }
 };

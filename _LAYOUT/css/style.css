@@ -31,6 +31,8 @@ nav {
     height: 0;
     opacity: 0;
     overflow: hidden;
+
+    transition: height 500ms,opacity 500ms;
 }
 .nav-group.open {
     display: flex;
@@ -100,6 +102,8 @@ nav {
     .nav-group {
         display: flex;
         flex-direction: row;
+        opacity: 1;
+        height: initial;
     }
     .nav-link {
         color: var(--light);
