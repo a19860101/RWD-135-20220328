@@ -97,8 +97,6 @@
     <script>
         $(function(){
             $('.collapse-title').click(function(){
-                // $(this).next().toggle(600);
-                // $(this).next().fadeToggle();
 
                 $('.collapse-panel').slideUp();
                 $('.collapse-title.active').removeClass('active');
@@ -107,7 +105,17 @@
                 $(this).next().slideToggle();
                 $(this).toggleClass('active');
                 $(this).find('.collapse-toggle').toggleClass('active');
-            })
+            });
+            // $('.collapse-title').on('click',function(){
+            //     //動態綁定
+            //     $('.collapse-panel').slideUp();
+            //     $('.collapse-title.active').removeClass('active');
+            //     $('.collapse-toggle.active').removeClass('active');
+
+            //     $(this).next().slideToggle();
+            //     $(this).toggleClass('active');
+            //     $(this).find('.collapse-toggle').toggleClass('active');
+            // });
 
         })
     </script>
