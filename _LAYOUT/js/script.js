@@ -59,7 +59,7 @@ window.onload = function () {
         wrapper.style.marginLeft = -(imgWidth * currentIndex) + 'px';
     }
     // setInterval('show("next")',3000);
-    setInterval(show,3000);
+    // setInterval(show,3000);
     
 
 };
