@@ -99,6 +99,11 @@
             $('.collapse-title').click(function(){
                 // $(this).next().toggle(600);
                 // $(this).next().fadeToggle();
+
+                $('.collapse-panel').slideUp();
+                $('.collapse-title.active').removeClass('active');
+                $('.collapse-toggle.active').removeClass('active');
+
                 $(this).next().slideToggle();
                 $(this).toggleClass('active');
                 $(this).find('.collapse-toggle').toggleClass('active');
