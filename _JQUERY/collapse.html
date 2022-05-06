@@ -23,6 +23,8 @@
             border-bottom: 2px solid #2155CD;
             transition: background-color 500ms;
             cursor: pointer;
+            display: flex;
+            justify-content: space-between;
         }
         .collapse-title.active {
             background-color: #ffa1a1;
@@ -36,26 +38,51 @@
             display: none;
 
         }
+        .collapse-toggle-icon {
+            width: 15px;
+            height: 15px;
+            display: inline-block;
+            border-left: solid #000 3px;
+            border-bottom: solid #000 3px;
+            transform: rotate(-45deg);
+        }
+        
     </style>
 </head>
 <body>
     <div class="collapse">
-        <h2 class="collapse-title">title 1</h2>
+        <h2 class="collapse-title">title 1
+            <a href="#" class="collapse-toggle">
+                <span class="collapse-toggle-icon"></span>
+            </a>
+        </h2>
         <div class="collapse-panel">
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas veniam labore eos non quas odit cumque impedit dolores ipsa? Saepe neque perferendis libero accusantium minima fuga mollitia obcaecati nostrum natus.</p>
         </div>
-        <h2 class="collapse-title">title 2</h2>
+        <h2 class="collapse-title">title 2
+            <a href="#" class="collapse-toggle">
+                <span class="collapse-toggle-icon"></span>
+            </a>
+        </h2>
         <div class="collapse-panel">
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas veniam labore eos non quas odit cumque impedit dolores ipsa? Saepe neque perferendis libero accusantium minima fuga mollitia obcaecati nostrum natus.</p>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas veniam labore eos non quas odit cumque impedit dolores ipsa? Saepe neque perferendis libero accusantium minima fuga mollitia obcaecati nostrum natus.</p>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas veniam labore eos non quas odit cumque impedit dolores ipsa? Saepe neque perferendis libero accusantium minima fuga mollitia obcaecati nostrum natus.</p>
         </div>
-        <h2 class="collapse-title">title 3</h2>
+        <h2 class="collapse-title">title 3
+            <a href="#" class="collapse-toggle">
+                <span class="collapse-toggle-icon"></span>
+            </a>
+        </h2>
         <div class="collapse-panel">
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas veniam labore eos non quas odit cumque impedit dolores ipsa? Saepe neque perferendis libero accusantium minima fuga mollitia obcaecati nostrum natus.</p>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas veniam labore eos non quas odit cumque impedit dolores ipsa? Saepe neque perferendis libero accusantium minima fuga mollitia obcaecati nostrum natus.</p>
         </div>
-        <h2 class="collapse-title">title 4</h2>
+        <h2 class="collapse-title">title 4
+            <a href="#" class="collapse-toggle">
+                <span class="collapse-toggle-icon"></span>
+            </a>
+        </h2>
         <div class="collapse-panel">
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas veniam labore eos non quas odit cumque impedit dolores ipsa? Saepe neque perferendis libero accusantium minima fuga mollitia obcaecati nostrum natus.</p>
         </div>
