@@ -21,6 +21,14 @@
             background-color: #79DAE8;
             padding: 15px;
             border-bottom: 2px solid #2155CD;
+            transition: background-color 500ms;
+            cursor: pointer;
+        }
+        .collapse-title.active {
+            background-color: #ffa1a1;
+        }
+        .collapse-title:hover {
+            background-color: #ffa1a1;
         }
         .collapse-panel {
             background-color: #E8F9FD;
@@ -58,6 +66,7 @@
                 // $(this).next().toggle(600);
                 // $(this).next().fadeToggle();
                 $(this).next().slideToggle();
+                $(this).toggleClass('active');
             })
 
         })
