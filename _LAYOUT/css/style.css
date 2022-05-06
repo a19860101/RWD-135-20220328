@@ -373,3 +373,39 @@ footer {
     z-index: 5;
     transition:opacity 600ms 600ms;
 }
+/* slider */
+header {
+    background-image: initial;
+}
+.slider {
+    width: 100%;
+    margin: auto;
+    position: relative;
+
+    overflow: hidden;
+}
+img {
+    width: 100%;
+}
+.slider-wrapper {
+    display: flex;
+    /* width: 7200px; */
+    transition: 600ms;
+}
+.slider-item {
+    width: 1200px;
+    height: 600px;
+}
+.slider-nav {
+    background-color: rgb(255 255 255 / .2);
+    backdrop-filter: blur(2px);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    padding: 15px 0;
+}
+.slider-nav a {
+    text-decoration: none;
+    color: #000;
+}
