@@ -7,27 +7,37 @@
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
     <style>
-        .active {
+        p {
+            transition: 300ms;
+        }
+        p.active {
             background-color: #ccc;
             padding: 15px;
             border: 1px solid #000;
-            transition: 500ms;
         }
     </style>
 </head>
 <body>
-    <button>click</button>    
+    <button class="add">add</button>   
+    <button class="remove">remove</button> 
+    <button class="toggle">toggle</button> 
     <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita consequatur sunt numquam facilis harum alias nesciunt fugiat, provident distinctio eius necessitatibus, praesentium placeat ullam vero. Non quisquam nesciunt facere rem.
     </p>
     <script>
         $(function(){
-            $('button').click(function(){
+            $('.add').click(function(){
                 // $('p').css({
                 //     backgroundColor: '#aaa',
                 //     padding: 15
                 // })
                 $('p').addClass('active');
+            });
+            $('.remove').click(function(){
+                $('p').removeClass('active');
+            })
+            $('.toggle').click(function(){
+                $('p').toggleClass('active');
             })
         })
     </script>
