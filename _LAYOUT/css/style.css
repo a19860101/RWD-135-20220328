@@ -376,6 +376,7 @@ footer {
 /* slider */
 header {
     background-image: initial;
+    padding: 0;
 }
 .slider {
     width: 100%;
@@ -393,8 +394,8 @@ img {
     transition: 600ms;
 }
 .slider-item {
-    width: 1200px;
-    height: 600px;
+    width: 100%;
+    /* height: 600px; */
 }
 .slider-nav {
     background-color: rgb(255 255 255 / .2);

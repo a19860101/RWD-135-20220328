@@ -32,4 +32,35 @@ window.onload = function () {
         }
         
     };
+    let w = document.body.scrollWidth;
+    console.log(w);
+    let imgs = [...document.querySelectorAll('.slider-item')];
+    let totalImgs = imgs.length;
+    let imgWidth = w;
+    let wrapperWidth = imgWidth * totalImgs;
+    let wrapper = document.querySelector('.slider-wrapper');
+    wrapper.style.width = wrapperWidth + 'px';
+    let next = document.querySelector('.slider-next');
+    let prev = document.querySelector('.slider-prev');
+    let currentIndex = 0;
+
+    next.onclick = () => { show('next'); }
+    prev.onclick = () => { show('prev'); }
+
+    function show(direction){
+        if(direction == 'prev' ){
+            currentIndex = currentIndex == 0 ? totalImgs : currentIndex;
+            currentIndex = (currentIndex - 1) % totalImgs;
+        }else{
+            currentIndex = (currentIndex + 1) % totalImgs;
+            console.log(currentIndex);
+        }
+
+        wrapper.style.marginLeft = -(imgWidth * currentIndex) + 'px';
+    }
+    // setInterval('show("next")',3000);
+    setInterval(show,3000);
+    
+
 };
+
