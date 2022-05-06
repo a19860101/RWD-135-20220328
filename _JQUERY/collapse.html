@@ -47,6 +47,13 @@
             transform: rotate(-45deg);
         }
         
+        .collapse-toggle {
+            transition: transform 400ms;
+        }
+        .collapse-toggle.active {
+            transform: rotate(180deg) translateY(-5px);
+
+        }
     </style>
 </head>
 <body>
@@ -94,6 +101,7 @@
                 // $(this).next().fadeToggle();
                 $(this).next().slideToggle();
                 $(this).toggleClass('active');
+                $(this).find('.collapse-toggle').toggleClass('active');
             })
 
         })
