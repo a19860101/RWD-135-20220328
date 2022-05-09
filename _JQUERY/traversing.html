@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">title</h1>
+        <p class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta cum deleniti temporibus doloribus similique minima officiis quam ipsum dolores earum laboriosam et voluptatum quia harum numquam nesciunt nulla, qui nemo!
+        </p>
+        <div>
+            <h2>title</h2>
+        </div>
+        <ul>
+            <li class="item">list 1</li>
+            <li class="item">list 2</li>
+            <li class="item">list 3</li>
+            <li class="item">list 4</li>
+            <li class="item">list 5</li>
+        </ul>
+        <a href="#" class="link">link</a>
+    </div>
+    <script>
+        $(function(){
+            let content = $('.content');
+
+            console.log(content.parent()); //父層
+            console.log(content.parents()); // 長輩層
+            console.log(content.parents('body')); //長輩層(指定)
+            console.log(content.closest('.container')); //長輩(需指定)
+            console.log(content.closest('html')); //長輩(需指定)
+
+            let ul = $('ul');
+            console.log(ul.children());
+
+            let container = $('.container');
+            console.log(container.children()); //子元素
+            console.log(container.children('.link')); //子元素(指定)
+            console.log(container.find('li')); //後代元素(需指定)
+
+
+            console.log(content.next());// 下一個同輩元素
+            console.log(content.prev());// 上一個同輩元素
+            console.log(content.siblings()); // 同輩元素
+            console.log(content.siblings('.link')); //同輩元素(指定)
+            
+        })
+    </script>
+</body>
+</html>
