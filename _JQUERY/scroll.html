@@ -113,7 +113,7 @@
                 let h = $(window).scrollTop();
                 let IN = 'zoomIn';
                 let OUT = 'zoomOut';
-                console.log(h)
+                // console.log(h)
                 if(h > 800){
                     // $('.gotop').fadeIn();
                     // $('.gotop').addClass('active');
@@ -126,6 +126,12 @@
                     $('nav').removeClass('active');
                 }
             })
+
+            $('nav').find('a').each(function(){
+                let panel = $(this).attr('href');
+                let distance = $(panel).offset().top;
+                console.log(distance);
+            });
         })
     </script>
 </body>
