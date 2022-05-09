@@ -58,6 +58,8 @@
             bottom: 30px;
             text-align: center;
             line-height: 50px;
+
+            display: none;
         }
     </style>
 </head>
@@ -73,5 +75,18 @@
     <section id="product"></section>
     <section id="contact"></section>
     <a href="#" class="gotop">TOP</a>
+    <script>
+        $(function(){
+            $(window).scroll(function(){
+                let h = $(window).scrollTop();
+                console.log(h)
+                if(h > 800){
+                    $('.gotop').fadeIn();
+                }else{
+                    $('.gotop').fadeOut();
+                }
+            })
+        })
+    </script>
 </body>
 </html>
