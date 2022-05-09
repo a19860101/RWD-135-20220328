@@ -37,7 +37,18 @@
             margin: 0 10px;
             color: #eee;
             text-transform: uppercase;
+            display: inline-block;
+            padding: 6px 20px;
+            border-radius: 6px;
             transition:400ms;
+        }
+        nav a.active {
+            background-color: #f9dd3c;
+            color: #222;
+        }
+        nav a:hover {
+            background-color: #f9dd3c;
+            color: #222;
         }
         nav.active a {
             color: #333;
@@ -50,7 +61,7 @@
             background-color: #EB5353;
         }
         #service {
-            background-color: #F9D923;
+            background-color: #bdff5b;
         }
         #product {
             background-color: #36AE7C;
@@ -82,7 +93,7 @@
 </head>
 <body>
     <nav>
-        <a href="#about">about</a>
+        <a href="#about" class="active">about</a>
         <a href="#service">service</a>
         <a href="#product">product</a>
         <a href="#contact">contact</a>
@@ -94,6 +105,10 @@
     <a href="#" class="gotop animated">TOP</a>
     <script>
         $(function(){
+            $('nav').find('a').click(function(){
+                $('nav').find('a').removeClass('active');
+                $(this).addClass('active');
+            });
             $(window).scroll(function(){
                 let h = $(window).scrollTop();
                 let IN = 'zoomIn';
