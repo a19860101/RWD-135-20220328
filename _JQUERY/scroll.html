@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.min.css" integrity="sha512-b42SanD3pNHoihKwgABd18JUZ2g9j423/frxIP5/gtYgfBz/0nDHGdY/3hi+3JwhSckM3JLklQ/T6tJmV7mZEw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         * {
             margin: 0;
@@ -59,9 +60,9 @@
             text-align: center;
             line-height: 50px;
 
-            /* display: none; */
-            transform: translateX(200%)rotate(180deg);
-            transition: transform 600ms 600ms;
+            display: none;
+            /* transform: translateX(200%)rotate(180deg); */
+            /* transition: transform 600ms 600ms; */
         }
         .gotop.active {
             transform: translateX(0)rotate(0);
@@ -79,18 +80,22 @@
     <section id="service"></section>
     <section id="product"></section>
     <section id="contact"></section>
-    <a href="#" class="gotop">TOP</a>
+    <a href="#" class="gotop animated">TOP</a>
     <script>
         $(function(){
             $(window).scroll(function(){
                 let h = $(window).scrollTop();
+                let IN = 'zoomIn';
+                let OUT = 'zoomOut';
                 console.log(h)
                 if(h > 800){
                     // $('.gotop').fadeIn();
-                    $('.gotop').addClass('active');
+                    // $('.gotop').addClass('active');
+                    $('.gotop').show().removeClass(OUT).addClass(IN);
                 }else{
                     // $('.gotop').fadeOut();
-                    $('.gotop').removeClass('active');
+                    // $('.gotop').removeClass('active');
+                    $('.gotop').removeClass(IN).addClass(OUT);
                 }
             })
         })
