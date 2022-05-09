@@ -59,7 +59,12 @@
             text-align: center;
             line-height: 50px;
 
-            display: none;
+            /* display: none; */
+            transform: translateX(200%)rotate(180deg);
+            transition: transform 600ms 600ms;
+        }
+        .gotop.active {
+            transform: translateX(0)rotate(0);
         }
     </style>
 </head>
@@ -81,9 +86,11 @@
                 let h = $(window).scrollTop();
                 console.log(h)
                 if(h > 800){
-                    $('.gotop').fadeIn();
+                    // $('.gotop').fadeIn();
+                    $('.gotop').addClass('active');
                 }else{
-                    $('.gotop').fadeOut();
+                    // $('.gotop').fadeOut();
+                    $('.gotop').removeClass('active');
                 }
             })
         })
