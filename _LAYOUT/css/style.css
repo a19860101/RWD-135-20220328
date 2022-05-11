@@ -70,13 +70,7 @@ nav {
     transform: scaleX(1);
 }
 .nav-link.active::after {
-    content:'';
-    display: inline-block;
-    border-bottom: 2px solid var(--orange);
-    width: 100%;
-    position: absolute;
-    bottom: 5px;
-    left: 0;
+    transform: scaleX(1);
 }
 /* 虛擬類別 */
 /* .nav-link:hover{ */
