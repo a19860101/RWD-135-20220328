@@ -30,7 +30,7 @@
         nav.active {
             padding-top: 15px;
             padding-bottom: 15px;
-            background-color: rgb(222 222 222 / .6);;
+            background-color: #fff;
         }
         nav a {
             text-decoration:none;
@@ -105,10 +105,10 @@
     <a href="#" class="gotop animated">TOP</a>
     <script>
         $(function(){
-            $('nav').find('a').click(function(){
-                $('nav').find('a').removeClass('active');
-                $(this).addClass('active');
-            });
+            // $('nav').find('a').click(function(){
+            //     $('nav').find('a').removeClass('active');
+            //     $(this).addClass('active');
+            // });
             $(window).scroll(function(){
                 let h = $(window).scrollTop();
                 let IN = 'zoomIn';
@@ -125,13 +125,18 @@
                     $('.gotop').removeClass(IN).addClass(OUT);
                     $('nav').removeClass('active');
                 }
+                $('nav').find('a').each(function(){
+                    let panel = $(this).attr('href');
+                    let distance = $(panel).offset().top;
+                    console.log(distance);
+                    if(h >= distance - 200){
+                        $('nav').find('a').removeClass('active');
+                        $(this).addClass('active');
+                    }
+                });
             })
 
-            $('nav').find('a').each(function(){
-                let panel = $(this).attr('href');
-                let distance = $(panel).offset().top;
-                console.log(distance);
-            });
+           
         })
     </script>
 </body>
