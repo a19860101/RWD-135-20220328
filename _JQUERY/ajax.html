@@ -56,44 +56,69 @@
                 opacity: .1;
             }
         }
+        .select {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            flex-direction: column;
+        }
+        select {
+            padding:8px 15px;
+            width: 50%;
+            margin: 15px;
+        }
+       
     </style>
     <script>
         $(function(){
-            let url = 'https://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL';
-            $.ajax({
-                url: url,
-                // dataType:'jsonp',
-                beforeSend:function(){
-                    $('.loading').show();
-                },
-                success: function(datas){
-                    console.log(datas);
-                    $('.loading').hide();
-                    datas.forEach(data => {
-                        let content = `
-                        <div class="box">
-                            <div class="img">
-                            <img src="${data.album_file != '' ? data.album_file : 'https://via.placeholder.com/400x400?text=no img'}">
-                            </div>
-                            <div class="content">
-                                <h2>${data.animal_Variety}</h2>
-                                <div>${data.animal_kind}</div>
-                                <div>${data.animal_place}</div>
-                            </div>
-                        </div>
-                        `;
-                        $('.container').append(content);
-
-                    })
-                },
-                error: function(){
-                    alert('error');
-                }
+            $('#kind').change(function(){
+                let kind = $(this).val();
+                console.log(kind);
             })
+            // let url = 'https://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL';
+            // $.ajax({
+            //     url: url,
+            //     // dataType:'jsonp',
+            //     beforeSend:function(){
+            //         $('.loading').show();
+            //     },
+            //     success: function(datas){
+            //         console.log(datas);
+            //         $('.loading').hide();
+            //         datas.forEach(data => {
+            //             let content = `
+            //             <div class="box">
+            //                 <div class="img">
+            //                 <img src="${data.album_file != '' ? data.album_file : 'https://via.placeholder.com/400x400?text=no img'}">
+            //                 </div>
+            //                 <div class="content">
+            //                     <h2>${data.animal_Variety}</h2>
+            //                     <div>${data.animal_kind}</div>
+            //                     <div>${data.animal_place}</div>
+            //                 </div>
+            //             </div>
+            //             `;
+            //             $('.container').append(content);
+
+            //         })
+            //     },
+            //     error: function(){
+            //         alert('error');
+            //     }
+            // })
         })
     </script>
 </head>
 <body>
+    <div class="select">
+        <h2>請選擇種類</h2>
+        <select name="" id="kind">
+            <option>--請選擇--</option>
+            <option value="狗">狗</option>
+            <option value="貓">貓</option>
+        </select>
+    </div>
     <div class="container">
         <div class="loading">Loading...</div>
     </div>
