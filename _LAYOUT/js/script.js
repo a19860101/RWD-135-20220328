@@ -63,4 +63,28 @@ window.onload = function () {
     
 
 };
+// jquery
 
+$(function(){
+    $(window).scroll(function(){
+        let h = $(window).scrollTop();
+        let IN = 'zoomIn';
+        let OUT = 'zoomOut';
+        if(h > 800){
+            $('.gotop').show().removeClass(OUT).addClass(IN);
+            $('nav').addClass('active');
+        }else{
+            $('.gotop').removeClass(IN).addClass(OUT);
+            $('nav').removeClass('active');
+        }
+        $('.nav-menu').eq(0).find('a').each(function(){
+            let panel = $(this).attr('href');
+            let distance = $(panel).offset().top;
+            console.log(distance);
+            if(h >= distance - 200){
+                $('.nav-menu').eq(0).find('a').removeClass('active');
+                $(this).addClass('active');
+            }
+        });
+    })
+})
