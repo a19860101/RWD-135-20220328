@@ -21,9 +21,25 @@
         }
         .box {
             flex: 0 0 25%;
+            padding: 15px;
         }
-        img {
+        .img img {
             width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .img {
+            aspect-ratio: 1 / 1;
+            border: 1px solid #666;
+            border-bottom: 0;
+        }
+
+        .content {
+            border: 1px solid #666;
+            border-top:0;
+            padding: 15px;
+            border-radius: 0 0 6px 6px;
         }
         .loading {
             display: none;
@@ -55,10 +71,14 @@
                     datas.forEach(data => {
                         let content = `
                         <div class="box">
+                            <div class="img">
                             <img src="${data.album_file}">
-                            <h2>${data.animal_Variety}</h2>
-                            <div>${data.animal_kind}</div>
-                            <div>${data.animal_place}</div>
+                            </div>
+                            <div class="content">
+                                <h2>${data.animal_Variety}</h2>
+                                <div>${data.animal_kind}</div>
+                                <div>${data.animal_place}</div>
+                            </div>
                         </div>
                         `;
                         $('.container').append(content);
