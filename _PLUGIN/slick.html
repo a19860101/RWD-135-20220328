@@ -12,19 +12,21 @@
     <style>
         body {
             background-color: #ffa9a9;
+            margin: 0;
         }
         header {
             margin-bottom: 100px;
         }
         #slider {
-            width: 1200px;
+            width: 100%;
             margin: auto;
         }
         img {
             width: 100%;
         }
         #product {
-            width: 1200px;
+            max-width: 1200px;
+            width: 85%;
             margin: auto;
         }
         #product img {
@@ -36,31 +38,31 @@
     <header>
         <div id="slider">
             <div class="slider-item">
-                <img src="https://picsum.photos/id/23/1600/1000" alt="">
+                <img src="https://picsum.photos/id/23/1600/800" alt="">
             </div>
             <div class="slider-item">
-                <img src="https://picsum.photos/id/13/1600/1000" alt="">
+                <img src="https://picsum.photos/id/13/1600/800" alt="">
             </div>
             <div class="slider-item">
-                <img src="https://picsum.photos/id/33/1600/1000" alt="">
+                <img src="https://picsum.photos/id/33/1600/800" alt="">
             </div>
             <div class="slider-item">
-                <img src="https://picsum.photos/id/43/1600/1000" alt="">
+                <img src="https://picsum.photos/id/43/1600/800" alt="">
             </div>
             <div class="slider-item">
-                <img src="https://picsum.photos/id/53/1600/1000" alt="">
+                <img src="https://picsum.photos/id/53/1600/800" alt="">
             </div>
             <div class="slider-item">
-                <img src="https://picsum.photos/id/63/1600/1000" alt="">
+                <img src="https://picsum.photos/id/63/1600/800" alt="">
             </div>
             <div class="slider-item">
-                <img src="https://picsum.photos/id/73/1600/1000" alt="">
+                <img src="https://picsum.photos/id/73/1600/800" alt="">
             </div>
             <div class="slider-item">
-                <img src="https://picsum.photos/id/83/1600/1000" alt="">
+                <img src="https://picsum.photos/id/83/1600/800" alt="">
             </div>
             <div class="slider-item">
-                <img src="https://picsum.photos/id/93/1600/1000" alt="">
+                <img src="https://picsum.photos/id/93/1600/800" alt="">
             </div>
         </div>
     </header>
@@ -86,14 +88,32 @@
             $('#slider').slick({
                 autoplay: true,
                 dots: true,
-                arrows: true,
+                arrows: false,
                 autoplaySpeed: 5000,
                 speed: 1000,
+                centerMode: true,
+                centerPadding: '100px',
             });
             $('#product').slick({
                 slidesToShow: 4,
                 slidesToScroll: 4,
                 speed: 1000,
+                responsive:[
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                        }
+                    }
+                ]
             });
         })
     </script>
