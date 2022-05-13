@@ -73,6 +73,7 @@
     <script>
         $(function(){
             $('#kind').change(function(){
+                $('.container').empty();
                 let kind = $(this).val();
                 console.log(kind);
                 let url = 'https://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL';
@@ -85,10 +86,23 @@
                     success:function(datas){
                         $('.loading').hide();
                         
-                        let result = datas.filter(function(data){
-                            return data.animal_kind == kind
-                        })
+                        let result = datas.filter(data => data.animal_kind == kind);
                         console.log(result);
+                        result.forEach(function(data){
+                            let content = `
+                                <div class="box">
+                                    <div class="img">
+                                    <img src="${data.album_file != '' ? data.album_file : 'https://via.placeholder.com/400x400?text=no img'}">
+                                    </div>
+                                    <div class="content">
+                                        <h2>${data.animal_Variety}</h2>
+                                        <div>${data.animal_kind}</div>
+                                        <div>${data.animal_place}</div>
+                                    </div>
+                                </div>
+                                `;
+                            $('.container').append(content);
+                        })
                     }
                 })
             })
@@ -135,8 +149,8 @@
             <option value="貓">貓</option>
         </select>
     </div>
+    <div class="loading">Loading...</div>
     <div class="container">
-        <div class="loading">Loading...</div>
     </div>
 </body>
 </html>
