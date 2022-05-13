@@ -75,6 +75,22 @@
             $('#kind').change(function(){
                 let kind = $(this).val();
                 console.log(kind);
+                let url = 'https://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL';
+
+                $.ajax({
+                    url:url,
+                    beforeSend:function(){
+                        $('.loading').show();
+                    },
+                    success:function(datas){
+                        $('.loading').hide();
+                        
+                        let result = datas.filter(function(data){
+                            return data.animal_kind == kind
+                        })
+                        console.log(result);
+                    }
+                })
             })
             // let url = 'https://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL';
             // $.ajax({
