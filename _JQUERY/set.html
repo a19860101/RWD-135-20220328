@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let ary = ['狗','貓','貓','貓','狗','貓','狗','貓','貓'];
+        // ary = new Set(ary);
+        // ary = Array.from(ary);
+        ary = Array.from(new Set(ary))
+        console.log(ary);
+
+    </script>
+</body>
+</html>
