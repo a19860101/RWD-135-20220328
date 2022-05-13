@@ -85,8 +85,24 @@
     </div>
     <script>
         $(function(){
-            $('#slider').owlCarousel();
-            $('#product').owlCarousel();
+            $('#slider').owlCarousel({
+                items: 1,
+                autoplay: true,
+                dots: true,
+                nav: true,
+                navSpeed: 600,
+                autoplaySpeed: 600,
+                dotsSpeed: 600,
+                loop: true,
+                autoplayTimeout: 6000
+
+            });
+            $('#product').owlCarousel({
+                items: 4,
+                margin: 15,
+                center: true,
+                loop: true
+            });
         })
     </script>
 </body>
