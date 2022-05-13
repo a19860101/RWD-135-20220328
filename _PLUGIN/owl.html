@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background-color: #ffa9a9;
+            margin: 0;
+        }
+        header {
+            margin-bottom: 100px;
+        }
+        #slider {
+            width: 100%;
+            margin: auto;
+        }
+        img {
+            width: 100%;
+        }
+        #product {
+            max-width: 1200px;
+            width: 85%;
+            margin: auto;
+        }
+        #product img {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="slider" class="owl-carousel owl-theme">
+            <div class="slider-item">
+                <img src="https://picsum.photos/id/23/1600/800" alt="">
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/id/13/1600/800" alt="">
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/id/33/1600/800" alt="">
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/id/43/1600/800" alt="">
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/id/53/1600/800" alt="">
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/id/63/1600/800" alt="">
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/id/73/1600/800" alt="">
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/id/83/1600/800" alt="">
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/id/93/1600/800" alt="">
+            </div>
+        </div>
+    </header>
+    
+    <div id="product" class="owl-carousel owl-theme">
+        <img src="https://picsum.photos/id/2/400" alt="">
+        <img src="https://picsum.photos/id/12/400" alt="">
+        <img src="https://picsum.photos/id/22/400" alt="">
+        <img src="https://picsum.photos/id/32/400" alt="">
+        <img src="https://picsum.photos/id/42/400" alt="">
+        <img src="https://picsum.photos/id/52/400" alt="">
+        <img src="https://picsum.photos/id/62/400" alt="">
+        <img src="https://picsum.photos/id/72/400" alt="">
+        <img src="https://picsum.photos/id/82/400" alt="">
+        <img src="https://picsum.photos/id/92/400" alt="">
+        <img src="https://picsum.photos/id/102/400" alt="">
+        <img src="https://picsum.photos/id/112/400" alt="">
+        <img src="https://picsum.photos/id/122/400" alt="">
+        <img src="https://picsum.photos/id/132/400" alt="">
+    </div>
+    <script>
+        $(function(){
+            $('#slider').owlCarousel();
+            $('#product').owlCarousel();
+        })
+    </script>
+</body>
+</html>
