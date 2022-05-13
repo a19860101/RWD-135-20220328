@@ -13,12 +13,22 @@
         body {
             background-color: #ffa9a9;
         }
+        header {
+            margin-bottom: 100px;
+        }
         #slider {
             width: 1200px;
             margin: auto;
         }
         img {
             width: 100%;
+        }
+        #product {
+            width: 1200px;
+            margin: auto;
+        }
+        #product img {
+            margin: 10px;
         }
     </style>
 </head>
@@ -40,14 +50,50 @@
             <div class="slider-item">
                 <img src="https://picsum.photos/id/53/1600/1000" alt="">
             </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/id/63/1600/1000" alt="">
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/id/73/1600/1000" alt="">
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/id/83/1600/1000" alt="">
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/id/93/1600/1000" alt="">
+            </div>
         </div>
     </header>
+    
+    <div id="product">
+        <img src="https://picsum.photos/id/2/400" alt="">
+        <img src="https://picsum.photos/id/12/400" alt="">
+        <img src="https://picsum.photos/id/22/400" alt="">
+        <img src="https://picsum.photos/id/32/400" alt="">
+        <img src="https://picsum.photos/id/42/400" alt="">
+        <img src="https://picsum.photos/id/52/400" alt="">
+        <img src="https://picsum.photos/id/62/400" alt="">
+        <img src="https://picsum.photos/id/72/400" alt="">
+        <img src="https://picsum.photos/id/82/400" alt="">
+        <img src="https://picsum.photos/id/92/400" alt="">
+        <img src="https://picsum.photos/id/102/400" alt="">
+        <img src="https://picsum.photos/id/112/400" alt="">
+        <img src="https://picsum.photos/id/122/400" alt="">
+        <img src="https://picsum.photos/id/132/400" alt="">
+    </div>
     <script>
         $(function(){
             $('#slider').slick({
                 autoplay: true,
                 dots: true,
-                arrows: true
+                arrows: true,
+                autoplaySpeed: 5000,
+                speed: 1000,
+            });
+            $('#product').slick({
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                speed: 1000,
             });
         })
     </script>
