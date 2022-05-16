@@ -98,10 +98,18 @@
 
             });
             $('#product').owlCarousel({
-                items: 4,
+                items:2,
                 margin: 15,
-                center: true,
-                loop: true
+                center: false,
+                loop: true,
+                responsive:{
+                    600:{
+                        items:3
+                    },
+                    1200:{
+                        items:4
+                    }
+                }
             });
         })
     </script>
