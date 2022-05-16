@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-     <!-- CSS only -->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-     <!-- JavaScript Bundle with Popper -->
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
- 
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
 </head>
+
 <body>
+    <div class="bg-warning vh-100">
+        height:100vh
+    </div>
+    <div class="bg-info vw-100 p-3">width: 100vw</div>
     <h1 class="bg-primary mb-0 p-3">title</h1>
     <h1 class="bg-danger ms-5 mb-5 p-5">title</h1>
     <h1 class="bg-info m-5 pb-5 ps-3">title</h1>
@@ -34,5 +43,19 @@
         5 -> 3rem
         auto -> auto
      -->
+    <h2>width</h2>
+    <div class="p-3 mb-2 bg-primary w-100">width:100%</div>
+    <div class="p-3 mb-2 bg-primary w-75">width:75%</div>
+    <div class="p-3 mb-2 bg-primary w-50">width:50%</div>
+    <div class="p-3 mb-2 bg-primary w-25">width:25%</div>
+
+    <h2>height</h2>
+    <div class="bg-secondary d-flex" style="height:200px">
+        <div class="p-3 h-100 bg-primary w-25 me-3">height: 100%</div>
+        <div class="p-3 h-75 bg-primary w-25 me-3">height: 75%</div>
+        <div class="p-3 h-50 bg-primary w-25 me-3">height: 50%</div>
+        <div class="p-3 h-25 bg-primary w-25 me-3">height: 25%</div>
+    </div>
 </body>
+
 </html>
